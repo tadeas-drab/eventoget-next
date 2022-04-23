@@ -4,7 +4,6 @@ import Image from 'next/image'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/js/bootstrap.js'
 
-
 const Navigation: NextPage = () => {
     return (
         <div className="w-100">
@@ -21,10 +20,8 @@ const Navigation: NextPage = () => {
                             <a className="nav-link float-end" href="/#HowItWorks" >How it works</a>
                             <a className="nav-link float-end">Browse events</a>
                         </div>
+                        <div className="col-6 d-block d-md-none"></div>
                         <div className="col-2 d-block d-md-none">
-                            <a className="nav-link float-end">Log in</a>
-                        </div>
-                        <div className="col-6 d-block d-md-none">
                             <div className="dropdown">
                                 <button className="btn dropdown-toggle" type="button" id="navMenu" data-bs-toggle="dropdown" aria-expanded="false">
                                     Dropdown button
