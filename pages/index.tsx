@@ -38,9 +38,9 @@ const Home: NextPage = () => {
       <div className='top-decor'></div>
 
       <div className='white-bg'>
-        <div className="container pt-3 pb-3">
-          <h1 className='fw-bold'><img src="/images/fire.svg" className='icon'/>&nbsp;Hot news</h1>
-          <div className="row mt-4">
+        <div className="container pt-5 pb-5">
+          <h1 className='fw-bold fs-4 mb-5'><img src="/images/fire.svg" className='icon'/>&nbsp;Hot news</h1>
+          <div className="row">
             <div className='col-3'>
               <div className='card'>
                 <img src="/images/sheeran-concert.jpg" alt="photo" className='card-img'/>
@@ -97,7 +97,7 @@ const Home: NextPage = () => {
               </div>
             </div>
           </div>
-          <div className='text-center mt-3'>
+          <div className='text-center mt-5'>
             <button className='button-yellow'>
               <h4 className='mb-0 p-2'>Show all</h4>
             </button>
