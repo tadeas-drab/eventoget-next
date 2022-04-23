@@ -15,14 +15,16 @@ const Navigation: NextPage = () => {
                     <div className="row mt-2">
                         <div className="col-1"></div>
                         <div className="col-2">
-                            <h3>Tripseek</h3>
+                            <Link href="/">
+                                <a className="nav-link animated-underline"><h3>Tripseek</h3></a>
+                            </Link>
                         </div>
                         <div className="col-1"></div>
                         <div className="col-7 d-none d-md-block">
-                            <Link href="/about">
+                            <Link href="">
                                 <a className="nav-link float-end animated-underline">Sign up</a>
                             </Link>
-                            <Link href="/about">
+                            <Link href="">
                                 <a className="nav-link float-end animated-underline">Log in</a>
                             </Link>
                             <Link href="/#HowItWorks">
