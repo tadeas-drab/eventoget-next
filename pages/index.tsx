@@ -46,15 +46,15 @@ const Home: NextPage = () => {
 
       <div className='white-bg'>
         <div className="container pt-5 pb-5">
-          <h1 className='fw-bold fs-4 mb-5'><Image src="/images/fire.svg" width={50} height={50} className='icon'/>&nbsp;Hot news</h1>
+          <h1 className='fw-bold fs-4 mb-5'><Image src="/images/fire.svg" width={50} height={50} className='icon' alt="fire"/>&nbsp;Hot news</h1>
           <div className="row">
             <div className='col-3'>
               <div className='card'>
               <Image src="/images/sheeran-concert.jpg" alt="photo" width={306} height={175}/>
                <div className='card-text'>
                  <h2 className='fw-bold'>Ed Sheeran</h2>
-                 <h4><Image src="/images/pin.svg" className='icon' width={18} height={18}/>&nbsp;O2 Arena</h4>
-                 <h4><Image src="/images/calendar.svg" className='icon' width={18} height={18}/>&nbsp;21.06.2020</h4>
+                 <h4><Image src="/images/pin.svg" className='icon' width={18} height={18} alt="pin"/>&nbsp;O2 Arena</h4>
+                 <h4><Image src="/images/calendar.svg" className='icon' width={18} height={18} alt="calendar"/>&nbsp;21.06.2020</h4>
                  <div className='text-center'>
                   <button className='card-button'><h5 className='mb-0'>More info</h5></button>
                  </div>
@@ -67,8 +67,8 @@ const Home: NextPage = () => {
                 <Image src="/images/sheeran-concert.jpg" alt="photo" width={306} height={175} className='card-img'/>
                <div className='card-text'>
                  <h2 className='fw-bold'>Ed Sheeran</h2>
-                 <h4><Image src="/images/pin.svg" className='icon' width={18} height={18}/>&nbsp;O2 Arena</h4>
-                 <h4><Image src="/images/calendar.svg" className='icon' width={18} height={18}/>&nbsp;21.06.2020</h4>
+                 <h4><Image src="/images/pin.svg" className='icon' width={18} height={18} alt="pin"/>&nbsp;O2 Arena</h4>
+                 <h4><Image src="/images/calendar.svg" className='icon' width={18} height={18} alt="calendar"/>&nbsp;21.06.2020</h4>
                  <div className='text-center'>
                   <button className='card-button'><h5 className='mb-0'>More info</h5></button>
                  </div>
@@ -81,8 +81,8 @@ const Home: NextPage = () => {
                 <Image src="/images/sheeran-concert.jpg" alt="photo" width={306} height={175} className='card-img'/>
                <div className='card-text'>
                  <h2 className='fw-bold'>Ed Sheeran</h2>
-                 <h4><Image src="/images/pin.svg" className='icon' width={18} height={18}/>&nbsp;O2 Arena</h4>
-                 <h4><Image src="/images/calendar.svg" className='icon' width={18} height={18}/>&nbsp;21.06.2020</h4>
+                 <h4><Image src="/images/pin.svg" className='icon' width={18} height={18} alt="pin"/>&nbsp;O2 Arena</h4>
+                 <h4><Image src="/images/calendar.svg" className='icon' width={18} height={18} alt="calendar"/>&nbsp;21.06.2020</h4>
                  <div className='text-center'>
                   <button className='card-button'><h5 className='mb-0'>More info</h5></button>
                  </div>
@@ -95,8 +95,8 @@ const Home: NextPage = () => {
                 <Image src="/images/sheeran-concert.jpg" alt="photo" width={306} height={175} className='card-img'/>
                <div className='card-text'>
                  <h2 className='fw-bold'>Ed Sheeran</h2>
-                 <h4><Image src="/images/pin.svg" className='icon' width={18} height={18}/>&nbsp;O2 Arena</h4>
-                 <h4><Image src="/images/calendar.svg" className='icon' width={18} height={18}/>&nbsp;21.06.2020</h4>
+                 <h4><Image src="/images/pin.svg" className='icon' width={18} height={18} alt="pin"/>&nbsp;O2 Arena</h4>
+                 <h4><Image src="/images/calendar.svg" className='icon' width={18} height={18} alt="calendar"/>&nbsp;21.06.2020</h4>
                  <div className='text-center'>
                   <button className='card-button'><h5 className='mb-0'>More info</h5></button>
                  </div>
@@ -120,7 +120,7 @@ const Home: NextPage = () => {
           <div className='row m-4'>
             <div className='col-5'>
               <h1 className=' text-end'>
-                <Image src="/images/search.svg" width={100} height={100}/>
+                <Image src="/images/search.svg" width={100} height={100} alt="search"/>
               </h1>
             </div>
             <div className='col-2'></div>
@@ -138,7 +138,7 @@ const Home: NextPage = () => {
             <div className='col-2'></div>
             <div className='col-5'>
               <h1 className=''>
-                <Image src="/images/plane.svg" width={100} height={100}/>
+                <Image src="/images/plane.svg" width={100} height={100} alt="plane"/>
               </h1>
             </div>
           </div>
@@ -148,7 +148,7 @@ const Home: NextPage = () => {
           <div className='row m-4'>
             <div className='col-5'>
               <h1 className=' text-end'>
-                <Image src="/images/happy.svg" width={100} height={100}/>
+                <Image src="/images/happy.svg" width={100} height={100} alt="happy"/>
               </h1>
             </div>
             <div className='col-2'></div>
@@ -213,13 +213,13 @@ const Home: NextPage = () => {
           <div className='row'>
             <div className='col-6'>
               <h1 className='fs-10 text-center'>
-                <Image src="/images/user.svg" width={150} height={150} className='icon'/>
+                <Image src="/images/user.svg" width={150} height={150} className='icon' alt="user"/>
               </h1>
               <h1 className='text-center mt-5'><span className='animated-underline'>Create personal account</span></h1>
             </div>
             <div className='col-6 vertical-border-line'>
               <h1 className='fs-10 text-center'>
-                <Image src="/images/users.svg" width={150} height={150} className='icon'/>
+                <Image src="/images/users.svg" width={150} height={150} className='icon' alt="users"/>
               </h1>
               <h1 className='text-center mt-5'><span className='animated-underline'>Create group</span></h1>
             </div>
