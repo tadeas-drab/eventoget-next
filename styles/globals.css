@@ -69,7 +69,7 @@ a {
 }
 
 .fs-55 {
-    font-size: 5em !important;
+    font-size: 4.5em !important;
 }
 
 .fs-4 {
@@ -211,6 +211,13 @@ input:focus {
 .transparent-button:hover {
     background-color: #014254;
     color: white;
+}
+
+.card-light {
+    background: #f2f2f2;
+    border-radius: 0 0 10px 10px;
+    border: 0;
+    width: 100%;
 }
 
 
