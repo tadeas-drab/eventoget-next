@@ -16,8 +16,8 @@ const Home: NextPage = () => {
 
       <Navigation/>
       <div className="h-100">
-        <div className="container mt-7">
-          <h1 className="main-title fw-bold">Search, plan and enjoy events</h1>
+        <div className="container mt-10">
+          <h1 className="main-title fw-bold mt-2">Search, plan and enjoy events</h1>
           <div className="row mt-3">
             <div className='col-8'>
               <h4 className="lighter-text">Find best event for your family or friend. And if you can't find, just create it</h4>
