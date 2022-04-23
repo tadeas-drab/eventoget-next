@@ -12,10 +12,10 @@ const Contact: NextPage = () => {
                     <h1 className='fw-bold fs-4 mb-5'>Follow us</h1>
                     <div className='row'>
                         <div className='col-6'>
-                            <h1 className='mb-3'><img src="/images/instagram.svg" className='icon' alt="icon"/>&nbsp;@tripseek</h1>
-                            <h1 className='mb-3'><img src="/images/messenger.svg" className='icon' alt="icon"/>&nbsp;Tripseek</h1>
-                            <h1 className='mb-3'><img src="/images/linkedin.svg" className='icon' alt="icon"/>&nbsp;@tripseek</h1>
-                            <h1 className='mb-3'><img src="/images/youtube.svg" className='icon' alt="icon"/>&nbsp;Tripseek</h1>
+                            <h3 className='mb-3'><img src="/images/instagram.svg" alt="icon" width={20} height={20}/>&nbsp;@tripseek</h3>
+                            <h3 className='mb-3'><img src="/images/messenger.svg" alt="icon" width={20} height={20}/>&nbsp;Tripseek</h3>
+                            <h3 className='mb-3'><img src="/images/linkedin.svg" alt="icon" width={20} height={20}/>&nbsp;@tripseek</h3>
+                            <h3 className='mb-3'><img src="/images/youtube.svg" alt="icon" width={20} height={20}/>&nbsp;Tripseek</h3>
                         </div>
                         <div className='col-3 vertical-border-line-thin'>
                             <h5 className='mt-3'><span className='animated-underline'>Browse events</span></h5>

@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import 'bootstrap/dist/css/bootstrap.css'
+import Link from 'next/link'
 
 const Navigation: NextPage = () => {
     return (
@@ -18,10 +19,18 @@ const Navigation: NextPage = () => {
                         </div>
                         <div className="col-1"></div>
                         <div className="col-7 d-none d-md-block">
-                            <a className="nav-link float-end animated-underline">Sign up</a>
-                            <a className="nav-link float-end animated-underline">Log in</a>
-                            <a className="nav-link float-end animated-underline" href="/#HowItWorks" >How it works</a>
-                            <a className="nav-link float-end animated-underline">Browse events</a>
+                            <Link href="/about">
+                                <a className="nav-link float-end animated-underline">Sign up</a>
+                            </Link>
+                            <Link href="/about">
+                                <a className="nav-link float-end animated-underline">Log in</a>
+                            </Link>
+                            <Link href="/about">
+                                <a className="nav-link float-end animated-underline" href="/#HowItWorks" >How it works</a>
+                            </Link>
+                            <Link href="/about">
+                                <a className="nav-link float-end animated-underline">Browse events</a>
+                            </Link>
                         </div>
                         <div className="col-4 d-block d-md-none"></div>
                         <div className="col-2 d-block d-md-none">
@@ -30,10 +39,26 @@ const Navigation: NextPage = () => {
                                     M
                                 </button>
                                 <ul className="dropdown-menu" aria-labelledby="navMenu">
-                                    <li><a className="dropdown-item float-end" href="#">Browse events</a></li>
-                                    <li><a className="dropdown-item float-end" href="#">How it works</a></li>
-                                    <li><a className="dropdown-item float-end" href="#">Log in</a></li>
-                                    <li><a className="dropdown-item float-end" href="#">Sign up</a></li>
+                                    <li>
+                                        <Link href="/about">
+                                            <a className="dropdown-item float-end" href="#">Browse events</a>
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link href="/about">
+                                            <a className="dropdown-item float-end" href="#">How it works</a>
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link href="/about">
+                                            <a className="dropdown-item float-end" href="#">Log in</a>
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link href="/about">
+                                            <a className="dropdown-item float-end" href="#">Sign up</a>
+                                        </Link>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
