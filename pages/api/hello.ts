@@ -1,5 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
+import { fetchArrivalLocation } from "../../data_provider/kiwi/fetchArrivalLocation";
+
 const axios = require("axios").default;
 
 const config = {
@@ -40,12 +42,14 @@ export default function handler(
   res: NextApiResponse<Data>
 ) {
   res.status(200).json({ name: "John Doe" });
-  getFlights(
-    "KSC",
-    "PRG",
-    "06/05/2022",
-    "06/05/2022",
-    "09/05/2022",
-    "09/05/2022"
-  );
+  // getFlights(
+  //   "KSC",
+  //   "PRG",
+  //   "06/05/2022",
+  //   "06/05/2022",
+  //   "09/05/2022",
+  //   "09/05/2022"
+  // );
+;
+  console.log(fetchArrivalLocation("48.997906", "21.239607"));
 }
