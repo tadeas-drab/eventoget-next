@@ -37,3 +37,7 @@ a {
     background: #014254;
     border-radius: 10px;
 }
+
+.w-100 {
+    width: 100% !important;
+}
