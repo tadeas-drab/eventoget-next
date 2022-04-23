@@ -25,10 +25,10 @@ const Navigation: NextPage = () => {
                             <Link href="/about">
                                 <a className="nav-link float-end animated-underline">Log in</a>
                             </Link>
-                            <Link href="#HowItWorks">
+                            <Link href="/#HowItWorks">
                                 <a className="nav-link float-end animated-underline">How it works</a>
                             </Link>
-                            <Link href="/about">
+                            <Link href="/events">
                                 <a className="nav-link float-end animated-underline">Browse events</a>
                             </Link>
                         </div>
