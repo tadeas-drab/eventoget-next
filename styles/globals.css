@@ -51,12 +51,24 @@ a {
     height: 100vh !important;
 }
 
+.w-75 {
+    width: 75%;
+}
+
 
 /* font size
 -------------------------------------------------- */
 
 .main-title {
     font-size: 7em;
+}
+
+.fs-55 {
+    font-size: 5.5em !important;
+}
+
+.fs-4 {
+    font-size: 4em !important;
 }
 
 .fs-085 {
@@ -199,4 +211,31 @@ input:focus {
 .icon {
     height: 1em;
     width: auto;
+}
+
+
+/* hr
+-------------------------------------------------- */
+
+hr {
+    width: 100%;
+    border-top: 5px solid #012934;
+    border-radius: 5px;
+    margin: 3em;
+    padding: 0px;
+}
+
+
+/* accordion collapsible
+-------------------------------------------------- */
+
+.accordion-button {
+    background-image: linear-gradient(to right top, #67dcb3, #77e2aa, #8be89f, #a0ed94, #b5f18a, #caf480, #e1f778, #f9f871);
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.accordion-item {
+    margin-top: 2em;
 }
