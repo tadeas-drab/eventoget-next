@@ -7,7 +7,7 @@ import Navigation from './shared/navigation'
 const Home: NextPage = () => {
   return (
 
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Tripseek</title>
         <meta name="description" content="find or create events" />
@@ -15,46 +15,97 @@ const Home: NextPage = () => {
       </Head>
 
       <Navigation/>
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.tsx</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+      <div className="h-100">
+        <div className="container mt-7">
+          <h1 className="main-title fw-bold">Search, plan and enjoy events</h1>
+          <div className="row mt-3">
+            <div className='col-8'>
+              <h4 className="lighter-text">Find best event for your family or friend. And if you can't find, just create it</h4>
+              <div className="mt-5 w-100">
+                <input placeholder='Hackatlon'></input>
+                <button className='btn search-button'>Search</button>
+              </div>
+              <button className='transparent-button fs-085 m-1'>Sheeran concert</button>
+              <button className='transparent-button fs-085 m-1'>Hack Kosice</button>
+            </div>
+            <div className='col-4 d-none d-md-block text-center'>
+              <img src="/images/find-event.svg" width={200} height={200} />
+            </div>
+          </div>
         </div>
-      </main>
+      </div>
+
+      <div className='top-decor'></div>
+
+      <div className='white-bg'>
+        <div className="container pt-3 pb-3">
+          <h1 className='fw-bold'><img src="/images/fire.svg" className='icon'/>&nbsp;Hot news</h1>
+          <div className="row mt-4">
+            <div className='col-3'>
+              <div className='card'>
+                <img src="/images/sheeran-concert.jpg" alt="photo" className='card-img'/>
+               <div className='card-text'>
+                 <h2 className='fw-bold'>Ed Sheeran</h2>
+                 <h4><img src="/images/pin.svg" className='icon'/>&nbsp;O2 Arena</h4>
+                 <h4><img src="/images/calendar.svg" className='icon'/>&nbsp;21.06.2020</h4>
+                 <div className='text-center'>
+                  <button className='card-button'><h5 className='mb-0'>More info</h5></button>
+                 </div>
+               </div>
+              </div>
+            </div>
+
+            <div className='col-3'>
+              <div className='card'>
+                <img src="/images/sheeran-concert.jpg" alt="photo" className='card-img'/>
+               <div className='card-text'>
+                 <h2 className='fw-bold'>Ed Sheeran</h2>
+                 <h4><img src="/images/pin.svg" className='icon'/>&nbsp;O2 Arena</h4>
+                 <h4><img src="/images/calendar.svg" className='icon'/>&nbsp;21.06.2020</h4>
+                 <div className='text-center'>
+                  <button className='card-button'><h5 className='mb-0'>More info</h5></button>
+                 </div>
+               </div>
+              </div>
+            </div>
+
+            <div className='col-3'>
+              <div className='card'>
+                <img src="/images/sheeran-concert.jpg" alt="photo" className='card-img'/>
+               <div className='card-text'>
+                 <h2 className='fw-bold'>Ed Sheeran</h2>
+                 <h4><img src="/images/pin.svg" className='icon'/>&nbsp;O2 Arena</h4>
+                 <h4><img src="/images/calendar.svg" className='icon'/>&nbsp;21.06.2020</h4>
+                 <div className='text-center'>
+                  <button className='card-button'><h5 className='mb-0'>More info</h5></button>
+                 </div>
+               </div>
+              </div>
+            </div>
+
+            <div className='col-3'>
+              <div className='card'>
+                <img src="/images/sheeran-concert.jpg" alt="photo" className='card-img'/>
+               <div className='card-text'>
+                 <h2 className='fw-bold'>Ed Sheeran</h2>
+                 <h4><img src="/images/pin.svg" className='icon'/>&nbsp;O2 Arena</h4>
+                 <h4><img src="/images/calendar.svg" className='icon'/>&nbsp;21.06.2020</h4>
+                 <div className='text-center'>
+                  <button className='card-button'><h5 className='mb-0'>More info</h5></button>
+                 </div>
+               </div>
+              </div>
+            </div>
+          </div>
+          <div className='text-center mt-3'>
+            <button className='button-yellow'>
+              <h4 className='mb-0 p-2'>Show all</h4>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <div className='bottom-decor'></div>
 
       <footer className={styles.footer}>
         <a
