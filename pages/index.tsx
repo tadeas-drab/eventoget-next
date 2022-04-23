@@ -200,18 +200,26 @@ const Home: NextPage = () => {
       </div>
       <div className='bottom-decor'></div>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
+      <div className='mt-5 mb-5'>
+        <h1 className='text-center fw-bold fs-55 mb-5'>Join us</h1>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-6'>
+              <h1 className='fs-10 text-center'>
+                <img src="/images/user.svg" className='icon'/>
+              </h1>
+              <h1 className='text-center mt-5'><span className='animated-underline'>Create personal account</span></h1>
+            </div>
+            <div className='col-6 vertical-border-line'>
+              <h1 className='fs-10 text-center'>
+                <img src="/images/users.svg" className='icon'/>
+              </h1>
+              <h1 className='text-center mt-5'><span className='animated-underline'>Create group</span></h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   )
 }

@@ -13,6 +13,7 @@ body {
 a {
     color: inherit;
     text-decoration: none;
+    cursor: pointer;
 }
 
 * {
@@ -69,6 +70,10 @@ a {
 
 .fs-4 {
     font-size: 4em !important;
+}
+
+.fs-10 {
+    font-size: 10em !important;
 }
 
 .fs-085 {
@@ -225,6 +230,10 @@ hr {
     padding: 0px;
 }
 
+.vertical-border-line {
+    border-left: 5px solid #012934;
+}
+
 
 /* accordion collapsible
 -------------------------------------------------- */
@@ -238,4 +247,30 @@ hr {
 
 .accordion-item {
     margin-top: 2em;
+}
+
+
+/* Animated underline
+--------------------------------------------------*/
+
+.animated-underline {
+    display: inline-block;
+    position: relative;
+    color: #012934 !important;
+}
+
+.animated-underline:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #012934;
+    transition: transform 0.25s ease-in-out;
+}
+
+.animated-underline:hover:after {
+    transform: scaleX(1);
 }
