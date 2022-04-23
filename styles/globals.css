@@ -65,15 +65,15 @@ a {
 }
 
 .fs-55 {
-    font-size: 5.5em !important;
+    font-size: 5em !important;
 }
 
 .fs-4 {
-    font-size: 4em !important;
+    font-size: 3.5em !important;
 }
 
 .fs-10 {
-    font-size: 10em !important;
+    font-size: 9em !important;
 }
 
 .fs-085 {
@@ -183,8 +183,8 @@ input:focus {
 }
 
 .card-img {
-    width: 100%;
-    height: auto;
+    width: 100% !important;
+    height: auto !important;
     position: center;
 }
 
@@ -214,8 +214,8 @@ input:focus {
 -------------------------------------------------- */
 
 .icon {
-    height: 1em;
-    width: auto;
+    height: 1em !important;
+    width: auto !important;
 }
 
 
@@ -253,6 +253,11 @@ hr {
     margin-top: 2em;
 }
 
+.accordion-button:not(.collapsed) {
+    color: #012934;
+    box-shadow: none;
+}
+
 
 /* Animated underline
 --------------------------------------------------*/
@@ -277,4 +282,27 @@ hr {
 
 .animated-underline:hover:after {
     transform: scaleX(1);
+}
+
+
+/* Center
+--------------------------------------------------*/
+
+.center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* z-index
+-------------------------------------------------- */
+
+.z-0 {
+    z-index: 0 !important;
+}
+
+.z-999 {
+    z-index: 999 !important;
 }
