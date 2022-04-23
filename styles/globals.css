@@ -234,6 +234,10 @@ hr {
     border-left: 5px solid #012934;
 }
 
+.vertical-border-line-thin {
+    border-left: 2px solid #012934;
+}
+
 
 /* accordion collapsible
 -------------------------------------------------- */
