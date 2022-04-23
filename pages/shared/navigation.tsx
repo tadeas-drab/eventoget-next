@@ -18,10 +18,10 @@ const Navigation: NextPage = () => {
                         </div>
                         <div className="col-1"></div>
                         <div className="col-7 d-none d-md-block">
-                            <a className="nav-link float-end">Sign up</a>
-                            <a className="nav-link float-end">Log in</a>
-                            <a className="nav-link float-end" href="/#HowItWorks" >How it works</a>
-                            <a className="nav-link float-end">Browse events</a>
+                            <a className="nav-link float-end animated-underline">Sign up</a>
+                            <a className="nav-link float-end animated-underline">Log in</a>
+                            <a className="nav-link float-end animated-underline" href="/#HowItWorks" >How it works</a>
+                            <a className="nav-link float-end animated-underline">Browse events</a>
                         </div>
                         <div className="col-4 d-block d-md-none"></div>
                         <div className="col-2 d-block d-md-none">
