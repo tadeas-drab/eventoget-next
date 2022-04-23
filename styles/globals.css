@@ -135,7 +135,7 @@ input:focus {
 -------------------------------------------------- */
 
 .search-button {
-    height: 3em !important;
+    height: 100% !important;
     border-radius: 5px;
     background-color: white;
 }
