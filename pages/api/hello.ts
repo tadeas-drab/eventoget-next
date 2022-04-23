@@ -1,6 +1,8 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
 import { fetchArrivalLocation } from "../../data_provider/kiwi/fetchArrivalLocation";
+import { fetchFlights } from "../../data_provider/kiwi/fetchFlights";
+import { Flight } from "../../model/Flight";
 
 const axios = require("axios").default;
 
@@ -37,7 +39,7 @@ type Data = {
   name: string;
 };
 
-export default function handler(
+export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
@@ -50,6 +52,9 @@ export default function handler(
   //   "09/05/2022",
   //   "09/05/2022"
   // );
-;
-  console.log(fetchArrivalLocation("48.997906", "21.239607"));
+
+  const arrivalLocation = await fetchArrivalLocation("50.073658", "14.418540"); // Prague coordinates
+  console.log(arrivalLocation);
+  const flights:Flight | undefined = await fetchFlights("KSC", arrivalLocation, "06/05/2022", "09/05/2022");
+  console.log(flights?.data[0]);
 }

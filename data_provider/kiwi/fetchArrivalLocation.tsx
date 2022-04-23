@@ -16,7 +16,7 @@ export const fetchArrivalLocation = async(latitude: string, longitude: string, r
           `https://tequila-api.kiwi.com/locations/radius?lat=${latitude}&lon=${longitude}&radius=${radius}&locale=en-US&location_types=airport&limit=1&active_only=true`,
           config
         );
-        return response.data;
+        return response.data.locations[0].code;
       } catch (error) {
         console.error(error);
       }
