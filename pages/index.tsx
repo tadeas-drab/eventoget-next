@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Navigation from './shared/navigation'
+import Contact from './shared/contact'
 
 const Home: NextPage = () => {
   return (
@@ -220,6 +221,7 @@ const Home: NextPage = () => {
         </div>
       </div>
 
+      <Contact/>
     </div>
   )
 }
