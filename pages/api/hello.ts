@@ -1,7 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
-import { fetchArrivalLocation } from "../../data_provider/kiwi/fetchArrivalLocation";
-import { fetchFlights } from "../../data_provider/kiwi/fetchFlights";
+import { fetchArrivalLocation } from "../../data-provider/kiwi/fetchArrivalLocation";
+import { fetchFlights } from "../../data-provider/kiwi/fetchFlights";
 import { Flight } from "../../model/Flight";
 import { fetchLocations } from "../../data-provider/events/FetchLocations";
 
