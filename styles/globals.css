@@ -19,6 +19,14 @@ a {
     box-sizing: border-box;
 }
 
+.w-100 {
+    width: 100% !important;
+}
+
+.nav-link {
+    color: #014254 !important;
+}
+
 
 /* Scrollbar
 -------------------------------------------------- */
@@ -36,8 +44,4 @@ a {
 ::-webkit-scrollbar-thumb {
     background: #014254;
     border-radius: 10px;
-}
-
-.w-100 {
-    width: 100% !important;
 }
