@@ -25,8 +25,8 @@ const Navigation: NextPage = () => {
                             <Link href="/about">
                                 <a className="nav-link float-end animated-underline">Log in</a>
                             </Link>
-                            <Link href="/about">
-                                <a className="nav-link float-end animated-underline" href="/#HowItWorks" >How it works</a>
+                            <Link href="/#HowItWorks">
+                                <a className="nav-link float-end animated-underline">How it works</a>
                             </Link>
                             <Link href="/about">
                                 <a className="nav-link float-end animated-underline">Browse events</a>
