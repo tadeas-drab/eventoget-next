@@ -114,6 +114,7 @@ const Home: NextPage = () => {
       
       <div className='bottom-decor'></div>
 
+      <span id="HowItWorks"></span>
       <div className='mt-5'>
         <h1 className='text-center fw-bold fs-55'>How does it work</h1>
         <div className='container mt-5'>
@@ -132,7 +133,8 @@ const Home: NextPage = () => {
           <hr/>
 
           <div className='row m-4'>
-            <div className='col-5'>
+            <div className='col-1'></div>
+            <div className='col-4'>
               <h1 className='text-end'>2. Pick best travel option</h1>
             </div>
             <div className='col-2'></div>
