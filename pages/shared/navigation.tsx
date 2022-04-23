@@ -15,7 +15,7 @@ const Navigation: NextPage = () => {
                     <div className="row mt-2">
                         <div className="col-1"></div>
                         <div className="col-2">
-                            <a className="nav-link"><h3>Tripseek</h3></a>
+                            <h3>Tripseek</h3>
                         </div>
                         <div className="col-1"></div>
                         <div className="col-7 d-none d-md-block">
