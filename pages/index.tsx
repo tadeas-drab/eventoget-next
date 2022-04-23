@@ -22,7 +22,7 @@ const Home: NextPage = () => {
             <h1 className="main-title fw-bold mt-2">Search, plan and enjoy events</h1>
             <div className="row mt-3">
               <div className='col-8'>
-                <h4 className="lighter-text mb-3">Find best event for your family or friend. And if you can't find, just create it</h4>
+                <h4 className="lighter-text mb-3">Find best event for your family or friend. And if you can&apos;t find, just create it</h4>
                 <div className="mt-5 w-100">
                   <input placeholder='Hackatlon'></input>
                   <button className='btn search-button ml-3'>Search</button>
