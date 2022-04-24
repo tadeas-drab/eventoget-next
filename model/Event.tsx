@@ -5,4 +5,5 @@ export interface Event {
   ImageUrl: string
   ArtistName: string
   TicketUrl: string
+  points: number 
 }
