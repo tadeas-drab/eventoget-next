@@ -49,7 +49,7 @@ const Home: NextPage = () => {
                   </div>
                   <div className='col-2 cursor-pointer'>
                     <Link href="">
-                      <Image src="/images/search-f.svg" width={60} height={60} alt="search" className='h100 white-bg br-5' />
+                        <Image src="/images/search-f.svg" width={60} height={60} alt="search" className='h100 white-bg br-5 dark-border-hover' />
                     </Link>
                   </div>
                 </div>
@@ -165,7 +165,7 @@ const Home: NextPage = () => {
                   <h3 className='mb-0'>Accordion Item #1</h3>
                 </button>
               </h2>
-              <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+              <div id="collapseOne" className="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                 <div className="accordion-body">
                   bla
                 </div>
