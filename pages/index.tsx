@@ -4,6 +4,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Navigation from './shared/navigation'
 import Contact from './shared/contact'
+import Link from 'next/link'
 
 const Home: NextPage = () => {
   return (
@@ -23,9 +24,15 @@ const Home: NextPage = () => {
             <div className="row mt-3">
               <div className='col-8'>
                 <h4 className="lighter-text mb-3">Find best event for your family or friend. And if you can&apos;t find, just create it</h4>
-                <div className="mt-5 w-100">
-                  <input placeholder='Hackatlon'></input>
-                  <button className='btn search-button ml-3'>Search</button>
+                <div className="mt-5 row">
+                  <div className='col-6'>
+                    <input placeholder='Hackatlon' className=' w-100'></input>
+                  </div>
+                  <div className='col-2'>
+                    <Link href="">
+                        <Image src="/images/search-f.svg" width={60} height={60} alt="search" className='h100 white-bg br-5'/>
+                    </Link>
+                  </div>
                 </div>
                 <button className='transparent-button m-1 p-1 pl-2 pr-2'>
                   <h5 className='m-0'>Sheeran concert</h5>
@@ -35,7 +42,7 @@ const Home: NextPage = () => {
                 </button>
               </div>
               <div className='col-4 d-none d-md-block text-center'>
-                <Image src="/images/find-event.svg" width={200} height={200} alt="calendar icon"/>
+                <Image src="/images/find-event.svg" width={170} height={170} alt="calendar icon"/>
               </div>
             </div>
           </div>

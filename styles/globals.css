@@ -56,6 +56,11 @@ a {
     height: 100vh !important;
 }
 
+.hm100 {
+    height: 100% !important;
+    max-height: 100% !important;
+}
+
 .w-75 {
     width: 75%;
 }
@@ -316,4 +321,12 @@ hr {
 
 .z-999 {
     z-index: 999 !important;
+}
+
+
+/* border radius
+-------------------------------------------------- */
+
+.br-5 {
+    border-radius: 5px;
 }
