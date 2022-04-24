@@ -6,7 +6,7 @@ import NavigationComponent from '../components/NavigationComponent'
 import ContactComponent from '../components/ContactComponent'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
-import EventComponent from '../components/EventComponent'
+import EventLightComponent from '../components/EventLightComponent'
 import { Event } from '../model/Event'
 
 const Events: NextPage = () => {
@@ -24,13 +24,13 @@ const Events: NextPage = () => {
     <div>
       <NavigationComponent />
       <div className='h-100'>
-        <h1 className='text-center fw-bold fs-55 mt-5 mb-5'>Upcomming events</h1>
+        <h1 className='text-center fw-bold fs-55 mt-5 mb-5'>Popular events</h1>
         <div className='container'>
           <div className="row">
             {
               events.map((event) => {
                 return (
-                  <EventComponent key={event.Id} {...event} />
+                  <EventLightComponent key={event.Id} {...event} />
                 )
               })
             }
