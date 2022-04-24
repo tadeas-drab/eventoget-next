@@ -4,11 +4,13 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Navigation from './shared/navigation'
 import Contact from './shared/contact'
+import Event from './shared/event'
 import Link from 'next/link'
+import axios, { AxiosResponse } from 'axios';
 
 const Home: NextPage = () => {
+  //const [events, setEvents] = useState<Event[]>([])
   return (
-
     <div className='z-0'>
       <Head>
         <title>Tripseek</title>
@@ -55,61 +57,10 @@ const Home: NextPage = () => {
         <div className="container pt-5 pb-5">
           <h1 className='fw-bold fs-4 mb-5'><Image src="/images/fire.svg" width={50} height={50} className='icon' alt="fire"/>&nbsp;Hot news</h1>
           <div className="row">
-            <div className='col-3'>
-              <div className='card'>
-              <Image src="/images/sheeran-concert.jpg" alt="photo" width={306} height={175}/>
-               <div className='card-text'>
-                 <h2 className='fw-bold'>Ed Sheeran</h2>
-                 <h4><Image src="/images/pin.svg" className='icon' width={18} height={18} alt="pin"/>&nbsp;O2 Arena</h4>
-                 <h4><Image src="/images/calendar.svg" className='icon' width={18} height={18} alt="calendar"/>&nbsp;21.06.2020</h4>
-                 <div className='text-center'>
-                  <button className='card-button'><h5 className='mb-0'>More info</h5></button>
-                 </div>
-               </div>
-              </div>
-            </div>
-
-            <div className='col-3'>
-              <div className='card'>
-                <Image src="/images/sheeran-concert.jpg" alt="photo" width={306} height={175} className='card-img'/>
-               <div className='card-text'>
-                 <h2 className='fw-bold'>Ed Sheeran</h2>
-                 <h4><Image src="/images/pin.svg" className='icon' width={18} height={18} alt="pin"/>&nbsp;O2 Arena</h4>
-                 <h4><Image src="/images/calendar.svg" className='icon' width={18} height={18} alt="calendar"/>&nbsp;21.06.2020</h4>
-                 <div className='text-center'>
-                  <button className='card-button'><h5 className='mb-0'>More info</h5></button>
-                 </div>
-               </div>
-              </div>
-            </div>
-
-            <div className='col-3'>
-              <div className='card'>
-                <Image src="/images/sheeran-concert.jpg" alt="photo" width={306} height={175} className='card-img'/>
-               <div className='card-text'>
-                 <h2 className='fw-bold'>Ed Sheeran</h2>
-                 <h4><Image src="/images/pin.svg" className='icon' width={18} height={18} alt="pin"/>&nbsp;O2 Arena</h4>
-                 <h4><Image src="/images/calendar.svg" className='icon' width={18} height={18} alt="calendar"/>&nbsp;21.06.2020</h4>
-                 <div className='text-center'>
-                  <button className='card-button'><h5 className='mb-0'>More info</h5></button>
-                 </div>
-               </div>
-              </div>
-            </div>
-
-            <div className='col-3'>
-              <div className='card'>
-                <Image src="/images/sheeran-concert.jpg" alt="photo" width={306} height={175} className='card-img'/>
-               <div className='card-text'>
-                 <h2 className='fw-bold'>Ed Sheeran</h2>
-                 <h4><Image src="/images/pin.svg" className='icon' width={18} height={18} alt="pin"/>&nbsp;O2 Arena</h4>
-                 <h4><Image src="/images/calendar.svg" className='icon' width={18} height={18} alt="calendar"/>&nbsp;21.06.2020</h4>
-                 <div className='text-center'>
-                  <button className='card-button'><h5 className='mb-0'>More info</h5></button>
-                 </div>
-               </div>
-              </div>
-            </div>
+            <Event/>
+            <Event/>
+            <Event/>
+            <Event/>
           </div>
           <div className='text-center mt-5'>
             <button className='button-yellow'>
