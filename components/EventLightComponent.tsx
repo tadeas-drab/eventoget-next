@@ -17,7 +17,7 @@ const EventLightComponent: NextPage<Event> = ({ Id, ImageUrl, ArtistName, Displa
                         <h6 className='mb-3'><Image src="/images/pin.svg" className='icon' width={18} height={18} alt="pin" />&nbsp;{DisplayLocation}</h6>
                         <h6 className='mb-3'><Image src="/images/calendar.svg" className='icon' width={18} height={18} alt="calendar" />&nbsp;{StartDate ? StartDate.split("T")[0] : 'Not defined'}</h6>
                         <div className='text-center mt-3'>
-                            <Link href={"/events/" + Id}>
+                            <Link href={"/trip/" + Id}>
                                 <button className='card-button w-100'><h5 className='mb-0'>More info</h5></button>
                             </Link>
                         </div>
