@@ -4,7 +4,7 @@ import Image from 'next/image'
 import 'bootstrap/dist/css/bootstrap.css'
 import Link from 'next/link'
 
-const Navigation: NextPage = () => {
+const NavigationComponent: NextPage = () => {
     return (
         <div>
             <Head>
@@ -73,4 +73,4 @@ const Navigation: NextPage = () => {
     )
 }
 
-export default Navigation
+export default NavigationComponent
