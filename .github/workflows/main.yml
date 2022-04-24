@@ -19,7 +19,7 @@ jobs:
       - name: Perform install, build commands
         run: |
             npm install 
-            npm run build
+            npm run lint
       - name: Deploy NextJS app to VM Server
         uses: appleboy/ssh-action@master
         with:
