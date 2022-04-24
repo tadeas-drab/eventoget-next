@@ -28,7 +28,7 @@ const Home: NextPage = () => {
                   <div className='col-6'>
                     <input placeholder='Hackatlon' className=' w-100'></input>
                   </div>
-                  <div className='col-2'>
+                  <div className='col-2 cursor-pointer'>
                     <Link href="">
                         <Image src="/images/search-f.svg" width={60} height={60} alt="search" className='h100 white-bg br-5'/>
                     </Link>
