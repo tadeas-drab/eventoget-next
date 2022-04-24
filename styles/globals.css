@@ -82,15 +82,15 @@ a {
 }
 
 .fs-55 {
-    font-size: 4.5em !important;
+    font-size: 4em !important;
 }
 
 .fs-4 {
-    font-size: 3.5em !important;
+    font-size: 3em !important;
 }
 
 .fs-10 {
-    font-size: 9em !important;
+    font-size: 8em !important;
 }
 
 .fs-085 {
@@ -257,7 +257,13 @@ hr {
     width: 100%;
     border-top: 5px solid #012934;
     border-radius: 5px;
-    margin: 3em;
+    padding: 0px;
+}
+
+.hr-thin {
+    width: 100%;
+    border-top: 2px solid #012934;
+    border-radius: 5px;
     padding: 0px;
 }
 

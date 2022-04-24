@@ -168,7 +168,7 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      
+      <span id="FAQ"></span>
       <div className='top-decor'></div>
       <div className='white-bg'>
         <div className="container pt-3 pb-5">
