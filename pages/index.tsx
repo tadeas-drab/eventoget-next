@@ -38,7 +38,7 @@ const Home: NextPage = () => {
                 <h4 className="lighter-text mb-3">Find best event for your family or friend. And if you can&apos;t find, just create it</h4>
                 <div className="mt-5 row">
                   <div className='col-6'>
-                    <input placeholder='Hackatlon' className=' w-100'></input>
+                    <input placeholder='Hackatlon' className='search-input w-100'></input>
                   </div>
                   <div className='col-2 cursor-pointer'>
                     <Link href="">
@@ -132,7 +132,7 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      
+      <span id="FAQ"></span>
       <div className='top-decor'></div>
       <div className='white-bg'>
         <div className="container pt-3 pb-5">
