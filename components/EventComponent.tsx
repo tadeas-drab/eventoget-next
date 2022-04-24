@@ -16,7 +16,7 @@ const EventComponent: NextPage<Event> = ({ Id, ImageUrl, ArtistName, DisplayLoca
                     <h4><Image src="/images/calendar.svg" className='icon' width={18} height={18} alt="calendar" />&nbsp;{StartDate ? StartDate.split("T")[0] : 'Not defined'}</h4>
                     <div className='text-center'>
                         <Link href={"/trip/" + Id}>
-                            <button className='card-button'><h5 className='mb-0'>More info</h5></button>
+                            <a className='card-button p-1' type="button"><h5 className='mb-0'>More info</h5></a>
                         </Link>
                     </div>
                 </div>
