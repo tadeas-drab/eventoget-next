@@ -4,12 +4,22 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Navigation from './shared/navigation'
 import Contact from './shared/contact'
-import Event from './shared/event'
+import EventComponent from './shared/EventComponent'
+import { Event } from '../model/Event'
 import Link from 'next/link'
 import axios, { AxiosResponse } from 'axios';
+import { useState, useEffect } from 'react'
 
 const Home: NextPage = () => {
-  //const [events, setEvents] = useState<Event[]>([])
+  const [events, setEvents] = useState<Event[]>([])
+  
+  useEffect(() => {
+    fetch('api/events/upcoming')
+    .then((res) => res.json()) 
+    .then((data) => {
+      setEvents(data);
+    })   
+  }, []);
   return (
     <div className='z-0'>
       <Head>
@@ -57,10 +67,13 @@ const Home: NextPage = () => {
         <div className="container pt-5 pb-5">
           <h1 className='fw-bold fs-4 mb-5'><Image src="/images/fire.svg" width={50} height={50} className='icon' alt="fire"/>&nbsp;Hot news</h1>
           <div className="row">
-            <Event/>
-            <Event/>
-            <Event/>
-            <Event/>
+            {
+              events.map((event) => {
+                return (
+                  <EventComponent key={event.Id} {...event}/>
+                )
+              })
+            }
           </div>
           <div className='text-center mt-5'>
             <button className='button-yellow'>
