@@ -3,6 +3,7 @@ import Image from 'next/image'
 import 'bootstrap/dist/css/bootstrap.css'
 import { useState, useEffect } from 'react'
 import { Event } from '../../model/Event'
+import Link from 'next/link'
 
 const EventComponent: NextPage<Event> = ({ImageUrl, ArtistName, DisplayLocation, StartDate}) => {
     console.log(ImageUrl)
@@ -15,7 +16,11 @@ const EventComponent: NextPage<Event> = ({ImageUrl, ArtistName, DisplayLocation,
                     <h4><Image src="/images/pin.svg" className='icon' width={18} height={18} alt="pin"/>&nbsp;{DisplayLocation}</h4>
                     <h4><Image src="/images/calendar.svg" className='icon' width={18} height={18} alt="calendar"/>&nbsp;{StartDate}</h4>
                     <div className='text-center'>
-                        <button className='card-button'><h5 className='mb-0'>More info</h5></button>
+                    <div className='text-center'>
+                        <Link href="/event">
+                            <a className="card-button p-1" type="button"><h5 className='mb-0'>More info</h5></a>
+                        </Link>
+                    </div>
                     </div>
                 </div>
             </div>

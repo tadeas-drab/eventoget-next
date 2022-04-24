@@ -11,7 +11,7 @@ const Flights: NextPage = () => {
     return (
         <div>
             <Navigation/>
-            <div className='container mt-5 mb-5'>
+            <div className='container mt-5 mb-5 h-100'>
                 <h1 className='text-center fw-bold fs-55 mb-5'>Best flights for you</h1>
                 <FlightCard/>
             </div>
