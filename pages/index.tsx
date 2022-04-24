@@ -165,7 +165,7 @@ const Home: NextPage = () => {
                   <h3 className='mb-0'>Accordion Item #1</h3>
                 </button>
               </h2>
-              <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+              <div id="collapseOne" className="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                 <div className="accordion-body">
                   bla
                 </div>
