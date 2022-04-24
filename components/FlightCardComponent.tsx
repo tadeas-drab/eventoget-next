@@ -17,7 +17,7 @@ const FlightCardComponent: any = ({ flights }: { flights: Flight[] }) => {
                     const to = data.cityTo + ' - ' + data.countryTo.name
                     const price = data.price + ' ' + flight.currency
 
-                    return <div className='row'>
+                    return <div className='row' key={data.id}>
                         <div className='col-9 p-0'>
                             <div className='card-text pr-0'>
                                 <div className=' vertical-border-line-right-thin'>

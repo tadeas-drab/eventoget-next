@@ -3,15 +3,15 @@ import { executeQuery } from '../../lib/mysqlDb'
 import { ErrorFetch } from '../../model/ErrorFetch';
 
 export const fetchByUserInput = async (input: string | string[]): Promise<string[] | ErrorFetch> => {
-    if(input.length < 1) {
+    if (input.length < 1) {
         return [];
     }
     const normalizedSearchText = input.toString().toLowerCase();
     const wildcard = "'\%" + normalizedSearchText + "\%'";
-    let query = "SELECT Description, Type, Title, DisplayLocation, Id FROM events WHERE `Title` LIKE " + wildcard + " OR `DisplayLocation` LIKE " + wildcard + " OR `Type` LIKE " + wildcard + "";
-    
+    let query = "SELECT Description, Type, Title, DisplayLocation, Id, ArtistName, ImageUrl FROM events WHERE `Title` LIKE " + wildcard + " OR `DisplayLocation` LIKE " + wildcard + " OR `Type` LIKE " + wildcard + " LIMIT 32";
+
     const searchWords = normalizedSearchText.split(' ');
-    for(let i = 1; i < searchWords.length; i++) {
+    for (let i = 1; i < searchWords.length; i++) {
         const wordWildcard = "'\%" + searchWords[i] + "\%'";
         query = query.concat(" OR `Title` LIKE " + wordWildcard);
         query = query.concat(" OR `Type` LIKE " + wordWildcard);
@@ -26,7 +26,7 @@ export const fetchByUserInput = async (input: string | string[]): Promise<string
     const rankedIndex = events.map((entry: any) => {
         let points = 0;
 
-        if(entry.Title.toLowerCase().includes(" " + normalizedSearchText + " "))
+        if (entry.Title.toLowerCase().includes(" " + normalizedSearchText + " "))
             points += 100;
 
         if (entry.Title.toLowerCase().includes(normalizedSearchText))
@@ -39,7 +39,7 @@ export const fetchByUserInput = async (input: string | string[]): Promise<string
             points += 18;
 
         searchWords.forEach(element => {
-            if(entry.Title.toLowerCase().includes(" " + element + " "))
+            if (entry.Title.toLowerCase().includes(" " + element + " "))
                 points += 50;
 
             if (entry.Title.toLowerCase().includes(element))
@@ -53,7 +53,7 @@ export const fetchByUserInput = async (input: string | string[]): Promise<string
         });
 
         return { ...entry, points };
-    }).sort((a: any, b : any) => b.points - a.points);
+    }).sort((a: any, b: any) => b.points - a.points);
 
     return rankedIndex;
 }
