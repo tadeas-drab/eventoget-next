@@ -73,6 +73,10 @@ a {
     width: 75%;
 }
 
+.h-576 {
+    height: 57.6px !important;
+}
+
 
 /* font size
 -------------------------------------------------- */
@@ -95,6 +99,10 @@ a {
 
 .fs-085 {
     font-size: 0.85em !important;
+}
+
+.fs-1 {
+    font-size: 1em !important;
 }
 
 
@@ -196,7 +204,7 @@ input:focus {
 .card {
     background: #e1f778;
     box-shadow: 0 8px 30px -7px white;
-    border-radius: 0 0 10px 10px;
+    border-radius: 10px;
     border: 0;
     width: 100%;
 }
@@ -209,10 +217,11 @@ input:focus {
     width: 100% !important;
     height: auto !important;
     position: center;
+    border-radius: 10px 10px 0 0;
 }
 
 .card-text {
-    line-height: 1.4 !important;
+    line-height: 2 !important;
     font-size: 0.8em !important;
     padding: 1em;
 }
