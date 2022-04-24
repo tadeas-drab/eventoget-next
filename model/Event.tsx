@@ -6,4 +6,6 @@ export interface Event {
   ArtistName: string
   TicketUrl: string
   points: number 
+  Latitude: string
+  Longitude: string
 }

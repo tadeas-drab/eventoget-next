@@ -1,7 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
-import { fetchArrivalLocation } from "../../data-provider/kiwi/fetchArrivalLocation";
-import { fetchFlights } from "../../data-provider/kiwi/fetchFlights";
+import { fetchArrivalLocation } from "../../data-provider/kiwi/FetchArrivalLocation";
+import { fetchFlights } from "../../data-provider/kiwi/FetchFlights";
 import { Flight } from "../../model/Flight";
 import { Data } from "../../model/Data";
 
@@ -20,41 +20,7 @@ export default async function handler(
     "09/05/2022"
   );
 
-  const map1 = flights.map((flight): Flight => {
-    const datas = Object.values(flight?.data).map((data): Data => {
-      return {
-        id: data.id,
-        flyFrom: data.flyFrom,
-        flyTo: data.flyTo,
-        cityFrom: data.cityFrom,
-        cityCodeFrom: data.cityCodeFrom,
-        cityTo: data.cityTo,
-        cityCodeTo: data.cityCodeTo,
-        countryFrom: data.countryFrom,
-        countryTo: data.countryTo,
-        distance: data.distance,
-        price: data.price,
-        airlines: data.airlines,
-        booking_token: data.booking_token,
-        deep_link: data.deep_link,
-        local_arrival: data.local_arrival,
-        utc_arrival: data.utc_arrival,
-        local_departure: data.local_departure,
-        utc_departure: data.utc_departure,
-      };
-    });
-    return {
-      search_id: flight.search_id,
-      currency: flight.currency,
-      data: datas,
-      _results: flight._results,
-      all_airlines: flight.all_airlines,
-    };
-  });
-
-  console.log(map1);
-
-  res.status(200).json({ name: "John Doe" });
+  res.status(200).json(flights);
 
   // const departureLocation = await fetchDepartureLocation("Kos");
   // console.log(departureLocation);

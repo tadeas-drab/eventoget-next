@@ -4,11 +4,86 @@ import NavigationComponent from '../../components/NavigationComponent'
 import ContactComponent from '../../components/ContactComponent'
 import Link from 'next/link'
 import { Event } from '../../model/Event'
+import { useEffect, useState } from 'react'
+import FlightCardComponent from '../../components/FlightCardComponent'
+import { fetchArrivalLocation } from '../../data-provider/kiwi/FetchArrivalLocation'
+import { fetchFlights } from '../../data-provider/kiwi/FetchFlights'
+import { Flight } from '../../model/Flight'
 
 export default function EventInfo(eventData: any) {
-    const event: Event = eventData.eventData as Event;
+    const [airport, setAirport] = useState<string>('');
+    const [departure, setDeparture] = useState<string>('')
+    const [searchState, setSearchState] = useState<string>('NONE')
+    const [possibleDepartures, setPossibleDepartures] = useState<string[]>([]);
+    const [flights, setFlights] = useState<Flight[]>([])
 
-    console.log(eventData)
+    const event: Event = eventData.eventData as Event;
+    const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'numeric', day: 'numeric', timeZoneName: 'short', hour: '2-digit', minute: '2-digit' };
+
+    useEffect(() => {
+        if (airport.length < 3)
+            return
+
+        fetch(`/api/kiwi/departurelocation?input=${airport}`)
+            .then((data) => data.json())
+            .then((locs: any) => {
+                setPossibleDepartures(locs.map((loc: any) => loc.join(' - ')))
+            });
+    }, [airport])
+
+    function addDays(date: any, days: any): Date {
+        var result = new Date(date);
+        result.setDate(result.getDate() + days);
+        return result;
+    }
+
+    const handleAirportInput = (evt: any) => {
+        evt.preventDefault();
+
+        setAirport(evt.target.value);
+    }
+
+    const handleDepartureInput = (evt: any) => {
+        evt.preventDefault();
+
+        setDeparture(evt.target.value);
+    }
+
+    const searchFlights = async (evt: any) => {
+        evt.preventDefault();
+
+        if (airport === '' || departure === '')
+            return;
+
+        if (!possibleDepartures || possibleDepartures.length == 0)
+            return;
+
+        setSearchState('LOADING');
+        const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'numeric', day: 'numeric' };
+
+        const departureLoc = possibleDepartures[0].split(' - ')[0];
+
+        const arrivalLocationRaw = await fetch(`/api/kiwi/arrivallocations?lat=${event.Latitude}&lon=${event.Longitude}`); // Prague coordinates
+        const arrivalLocation = await arrivalLocationRaw.text()
+
+        const arrivalDate = addDays(new Date(event.StartDate), 1)
+
+        const currentDayOfMonth = arrivalDate.getDate();
+        const currentMonth = arrivalDate.getMonth(); // Be careful! January is 0, not 1
+        const currentYear = arrivalDate.getFullYear();
+
+        const dateString = currentYear + "-" + (currentMonth + 1) + "-" + currentDayOfMonth;
+
+        console.log(dateString)
+        console.log(departure)
+
+        let flightsRaw: Response = await fetch(`/api/kiwi/flights?flyFrom=${departureLoc}&flyTo=${arrivalLocation}&departureDate=${departure}&arrivalDate=${dateString}`);
+        let r = await flightsRaw.json()
+        console.log(r)
+        setFlights(r);
+
+        setSearchState('LOADED');
+    }
 
     return (
         <div>
@@ -26,7 +101,7 @@ export default function EventInfo(eventData: any) {
                             <br />
                             <h2><Image src="/images/pin.svg" className='icon' width={30} height={30} alt="pin" />&nbsp;{event.DisplayLocation}</h2>
                             <br />
-                            <h2><Image src="/images/calendar.svg" className='icon' width={30} height={30} alt="calendar" />&nbsp;{event.StartDate ? event.StartDate.split("T")[0] : 'Not defined'}</h2>
+                            <h2><Image src="/images/calendar.svg" className='icon' width={30} height={30} alt="calendar" />&nbsp;{event.StartDate ? new Date(event.StartDate).toLocaleDateString('en-us', options) : 'Not defined'}</h2>
                         </div>
                     </div>
                     <div className='row mt-5'>
@@ -82,21 +157,29 @@ export default function EventInfo(eventData: any) {
                         </div>
                         <div className='row'>
                             <div className='col-5'>
-                                <input className="form-control" id="departureAirportField"></input>
+                                <input className="form-control" id="departureAirportField" onChange={(event: any) => handleAirportInput(event)} value={airport}></input>
                             </div>
                             <div className='col-5'>
-                                <input className="form-control" id="departureDateField"></input>
+                                <input type={"date"} className="form-control" id="departureDateField" onChange={(event: any) => handleDepartureInput(event)} value={departure}></input>
                             </div>
                             <div className='col-2 cursor-pointer'>
-                                <Link href="/flights">
-                                    <Image src="/images/search-f.svg" width={36} height={36} alt="search" className='h100 white-bg br-5' />
-                                </Link>
+                                <Image src="/images/search-f.svg" width={36} height={36} alt="search" className='h100 white-bg br-5' onClick={(event: any) => searchFlights(event)} />
                             </div>
                         </div>
                     </div>
                     <div className='col-2'></div>
                 </div>
             </div>
+            {searchState == 'NONE' ? null :
+                searchState == 'LOADING' ?
+                    <div className='container mt-5 mb-5 h-100'>
+                        <h1 className='text-center fw-bold fs-55 mb-5'>Searching...</h1>
+                    </div>
+                    :
+                    <div className='container mt-5 mb-5 h-100'>
+                        <h1 className='text-center fw-bold fs-55 mb-5'>Best flights for you</h1>
+                        <FlightCardComponent flights={flights} />
+                    </div>}
             <ContactComponent />
         </div>
     )
