@@ -121,22 +121,26 @@ a {
 -------------------------------------------------- */
 
 input {
-    border-radius: 5px;
-    border: 0px solid #276d72;
+    border-radius: 5px !important;
+    border: 0px solid #276d72 !important;
+    padding-left: 10px !important;
+    outline: none !important;
+    background-color: white !important;
+}
+
+.search-input {
     font-size: 1.3em !important;
     padding-left: 10px !important;
-    outline: none;
     height: 3em;
     width: 50%;
-    background-color: white;
 }
 
 input:hover {
-    border-bottom-color: #014254;
+    border-bottom-color: #014254 !important;
 }
 
 input:focus {
-    border-bottom-color: #014254;
+    outline: none !important;
 }
 
 
