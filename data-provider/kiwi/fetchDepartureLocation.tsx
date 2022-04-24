@@ -7,7 +7,7 @@ const config = {
 };
 
 axios.defaults.headers.common = {
-  apikey: "Yv-HrUbVowJVkKPzG50xncA4C-mATFkl",
+  apikey: process.env.KIWI_APIKEY,
 };
 
 export const fetchDepartureLocation = async (userInput: string) => {

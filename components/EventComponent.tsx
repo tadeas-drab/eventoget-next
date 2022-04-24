@@ -21,7 +21,7 @@ const EventComponent: NextPage<Event> = ({ Id, ImageUrl, ArtistName, DisplayLoca
                                 <button className='card-button w-100'><h5 className='mb-0'>More info</h5></button>
                             </Link>
                         </div>
-                    </div>
+                  </div>
             </div>
         </div>
     );
