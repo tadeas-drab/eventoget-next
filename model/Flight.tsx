@@ -6,7 +6,5 @@ export interface Flight {
     currency: string
     data: Data[]
     _results: number
-    search_params: SearchParams
     all_airlines: any[]
-    all_stopover_airports: any[]
   }

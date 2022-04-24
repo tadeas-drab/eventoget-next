@@ -16,9 +16,6 @@ export interface Data {
     countryTo: CountryTo
     distance: number
     price: number
-    conversion: Conversion
-    bags_price: BagsPrice
-    availability: Availability
     airlines: string[]
     booking_token: string
     deep_link: string
