@@ -1,6 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
-import fetchArrivalLoc from '../../../data-provider/kiwi/FetchArrivalLocation';
+import fetchArrivalLoc from '../../../data-provider/kiwi/fetcharrivallocation';
 
 export default async function handler(
     req: NextApiRequest,
