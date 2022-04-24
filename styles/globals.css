@@ -255,9 +255,11 @@ input:focus {
 
 hr {
     width: 100%;
-    border-top: 5px solid #012934;
+    border-top: 4px solid #012934;
     border-radius: 5px;
     padding: 0px;
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 .hr-thin {
