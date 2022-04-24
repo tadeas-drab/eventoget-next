@@ -12,11 +12,6 @@ const Events: NextPage = () => {
             <div className='h-100'>
                 <h1 className='text-center fw-bold fs-55 mt-5 mb-5'>Upcomming events</h1>
                 <div className='container'>
-                    <div className='white-bg w-100 mb-3'>
-                        <p className='p-2'>
-                            aaa
-                        </p>
-                    </div>
                     <div className="row">
                         <div className='col-3'>
                         <div className='card-light'>
