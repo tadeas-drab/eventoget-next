@@ -17,7 +17,6 @@ const Home: NextPage = () => {
       .then((res) => res.json())
       .then((data) => {
         setEvents(data);
-        console.log(data)
       })
   }, []);
 
@@ -27,7 +26,7 @@ const Home: NextPage = () => {
 
   const getPath = () => {
     var inputField = document.getElementById("searchField") as HTMLInputElement;
-    if(inputField) {
+    if (inputField) {
       goToPath(inputField.value);
     }
   }
@@ -60,7 +59,7 @@ const Home: NextPage = () => {
                   </div>
                   <div className='col-2 cursor-pointer'>
                     <Link href="/">
-                        <Image onClick={(event: any) => getPath()} src="/images/search-f.svg" width={60} height={60} alt="search" className='h100 white-bg br-5 dark-border-hover' />
+                      <Image onClick={(event: any) => getPath()} src="/images/search-f.svg" width={60} height={60} alt="search" className='h100 white-bg br-5 dark-border-hover' />
                     </Link>
                   </div>
                 </div>
@@ -132,7 +131,7 @@ const Home: NextPage = () => {
             </div>
           </div>
 
-          <hr className='hr-thin'/>
+          <hr className='hr-thin' />
 
           <div className='row m-4'>
             <div className='col-1'></div>
@@ -147,7 +146,7 @@ const Home: NextPage = () => {
             </div>
           </div>
 
-          <hr className='hr-thin'/>
+          <hr className='hr-thin' />
 
           <div className='row m-4'>
             <div className='col-5'>

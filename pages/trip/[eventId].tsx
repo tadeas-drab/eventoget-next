@@ -74,12 +74,8 @@ export default function EventInfo(eventData: any) {
 
         const dateString = currentYear + "-" + (currentMonth + 1) + "-" + currentDayOfMonth;
 
-        console.log(dateString)
-        console.log(departure)
-
         let flightsRaw: Response = await fetch(`/api/kiwi/flights?flyFrom=${departureLoc}&flyTo=${arrivalLocation}&departureDate=${departure}&arrivalDate=${dateString}`);
         let r = await flightsRaw.json()
-        console.log(r)
         setFlights(r);
 
         setSearchState('LOADED');
