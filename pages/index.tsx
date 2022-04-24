@@ -68,7 +68,7 @@ const Home: NextPage = () => {
           <h1 className='fw-bold fs-4 mb-5'><Image src="/images/fire.svg" width={50} height={50} className='icon' alt="fire"/>&nbsp;Hot news</h1>
           <div className="row">
             {
-              events.map((event) => {
+              events.slice(0,4).map((event) => {
                 return (
                   <EventComponent key={event.Id} {...event}/>
                 )
