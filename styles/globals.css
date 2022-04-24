@@ -161,6 +161,7 @@ input:focus {
 
 .button-yellow:hover {
     background-color: #8be89f;
+    color: #012934 !important;
 }
 
 
