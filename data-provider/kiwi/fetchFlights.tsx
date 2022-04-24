@@ -12,16 +12,18 @@ axios.defaults.headers.common = {
   apikey: "Yv-HrUbVowJVkKPzG50xncA4C-mATFkl",
 }
 
-export const fetchFlights = async(flyFrom: string, flyTo: string, departureDate: string, arrivalDate: string): Promise<Flight[] | undefined> => {
-    try {
-        const response = await axios.get(
-          `https://tequila-api.kiwi.com/v2/search?fly_from=${flyFrom}&fly_to=${flyTo}&date_from=${departureDate}&date_to=${departureDate}&return_from=${arrivalDate}&return_to=${arrivalDate}&flight_type=round&adults=1&vehicle_type=aircraft&sort=duration&limit=10`,
-          config
-        );
-        const json = response.data;
-        return json;
-      } catch (error) {
-        console.log("Error");
-        console.error(error);
-      }
+export const fetchFlights = async (flyFrom: string, flyTo: string, departureDate: string, arrivalDate: string): Promise<Flight[]> => {
+  try {
+    const response = await axios.get(
+      `https://tequila-api.kiwi.com/v2/search?fly_from=${flyFrom}&fly_to=${flyTo}&date_from=${departureDate}&date_to=${departureDate}&return_from=${arrivalDate}&return_to=${arrivalDate}&flight_type=round&adults=1&vehicle_type=aircraft&sort=duration&limit=10`,
+      config
+    );
+    let json = response.data;
+    json = Array.of(JSON.parse(JSON.stringify(json)))
+    return json;
+  } catch (error) {
+    console.log("Error");
+    console.error(error);
+    return []
+  }
 }

@@ -4,30 +4,24 @@ import { fetchArrivalLocation } from "../../data-provider/kiwi/fetchArrivalLocat
 import { fetchFlights } from "../../data-provider/kiwi/fetchFlights";
 import { Flight } from "../../model/Flight";
 import { Data } from "../../model/Data";
-import { fetchLocations } from "../../data-provider/events/FetchLocations";
-import { fetchDepartureLocation } from "../../data-provider/kiwi/fetchDepartureLocation";
-import { type } from "os";
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<any>
 ) {
-  res.status(200).json({ name: "John Doe" });
 
   const arrivalLocation = await fetchArrivalLocation("50.073658", "14.418540"); // Prague coordinates
   console.log(arrivalLocation);
 
-  const flights: Flight[] | undefined = await fetchFlights(
+  let flights: Array<Flight> = await fetchFlights(
     "KSC",
     arrivalLocation,
     "06/05/2022",
     "09/05/2022"
   );
-  // console.log(flights);
-  console.log(typeof flights);
 
-  const map1 = flights?.map((flight): Flight => {
-    const datas = flight.data.map((data): Data => {
+  const map1 = flights.map((flight): Flight => {
+    const datas = Object.values(flight?.data).map((data): Data => {
       return {
         id: data.id,
         flyFrom: data.flyFrom,
@@ -59,6 +53,8 @@ export default async function handler(
   });
 
   console.log(map1);
+
+  res.status(200).json({ name: "John Doe" });
 
   // const departureLocation = await fetchDepartureLocation("Kos");
   // console.log(departureLocation);
