@@ -15,19 +15,19 @@ const Events: NextPage = () => {
                 <div className='container'>
                     <div className="row">
                         <div className='col-3'>
-                        <div className='card-light'>
-                        <Image src="/images/sheeran-concert.jpg" alt="photo" width={306} height={175}/>
-                        <div className='card-text'>
-                            <h2 className='fw-bold'>Ed Sheeran</h2>
-                            <h4><Image src="/images/pin.svg" className='icon' width={18} height={18} alt="pin"/>&nbsp;O2 Arena</h4>
-                            <h4><Image src="/images/calendar.svg" className='icon' width={18} height={18} alt="calendar"/>&nbsp;21.06.2020</h4>
-                            <div className='text-center'>
-                            <Link href="/event">
-                                <a className="card-button p-1" type="button"><h5 className='mb-0'>More info</h5></a>
-                            </Link>
+                            <div className='card-light'>
+                                <Image src="/images/sheeran-concert.jpg" alt="photo" width={306} height={175}/>
+                                <div className='card-text'>
+                                    <h2 className='fw-bold'>Ed Sheeran</h2>
+                                    <h4><Image src="/images/pin.svg" className='icon' width={18} height={18} alt="pin"/>&nbsp;O2 Arena</h4>
+                                    <h4><Image src="/images/calendar.svg" className='icon' width={18} height={18} alt="calendar"/>&nbsp;21.06.2020</h4>
+                                    <div className='text-center'>
+                                        <Link href="/event">
+                                            <a className="card-button p-1" type="button"><h5 className='mb-0'>More info</h5></a>
+                                        </Link>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        </div>
                         </div>
 
                         <div className='col-3'>
