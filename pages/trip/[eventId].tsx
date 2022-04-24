@@ -108,13 +108,7 @@ export default function EventInfo(eventData: any) {
                         <div className='col-2'></div>
                         <div className='col-8'>
                             <p>
-                                Textař a písničkář Jan Pokorný, všem známý především jako Pokáč, se rozhodl uspořádat svůj doposud největší
-                                koncert, a to rovnou v O2 areně. Zařadí se tak mezi ty největší české zpěváky, kteří zde vystupovali. O2
-                                arena je pro české hudebníky nejvyšší příčkou na domácí scéně a stejně tak tomu je i v případě Pokáče.
-
-                                Oblíbený písničkář zůstává fanouškům „nablízku“ skrze sociální sítě, kde je velmi aktivní a počet jeho
-                                sledujících roste každým dnem. Pravidelně přidává videa na svůj YouTube Pokáčovo kanál a patří mezi
-                                nejsledovanější české interprety.
+                                {event.Description}
                             </p>
                         </div>
                         <div className='col-2'></div>

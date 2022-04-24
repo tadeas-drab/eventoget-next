@@ -12,7 +12,7 @@ const Flights: NextPage = () => {
         <div>
             <NavigationComponent />
             <div className='container mt-5 mb-5 h-100'>
-                <h1 className='text-center fw-bold fs-55 mb-5'>Best flights for you</h1>
+                <h1 className='text-center fw-bold fs-55 mb-5'>Best flights suited for you</h1>
                 <FlightCardComponent />
             </div>
             <ContactComponent />

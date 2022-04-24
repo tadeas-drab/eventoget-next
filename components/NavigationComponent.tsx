@@ -31,7 +31,7 @@ const NavigationComponent: NextPage = () => {
                                 <a className="nav-link float-end animated-underline">How it works</a>
                             </Link>
                             <Link href="/events">
-                                <a className="nav-link float-end animated-underline">Browse events</a>
+                                <a className="nav-link float-end animated-underline">Events</a>
                             </Link>
                         </div>
                         <div className="col-4 d-block d-md-none"></div>
@@ -43,7 +43,7 @@ const NavigationComponent: NextPage = () => {
                                 <ul className="dropdown-menu" aria-labelledby="navMenu">
                                     <li>
                                         <Link href="/about">
-                                            <a className="dropdown-item float-end" href="#">Browse events</a>
+                                            <a className="dropdown-item float-end" href="#">Events</a>
                                         </Link>
                                     </li>
                                     <li>

@@ -8,4 +8,5 @@ export interface Event {
   points: number 
   Latitude: string
   Longitude: string
+  Description: string
 }
