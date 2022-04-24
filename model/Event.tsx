@@ -5,4 +5,6 @@ export interface Event {
   ImageUrl: string
   ArtistName: string
   TicketUrl: string
+  Latitude: string
+  Longitude: string
 }
