@@ -21,7 +21,14 @@ const Home: NextPage = () => {
   }, []);
 
   const goToPath = (userInput: string) => {
-    window.location.href = '/trip/' + userInput;
+    window.location.href = '/search/' + userInput;
+  }
+
+  const getPath = () => {
+    var inputField = document.getElementById("searchField") as HTMLInputElement;
+    if (inputField) {
+      goToPath(inputField.value);
+    }
   }
 
   const clickShowAll = (event: MouseEvent) => {
@@ -48,11 +55,11 @@ const Home: NextPage = () => {
                 <h4 className="lighter-text mb-3">Find best event for your family or friend. And if you can&apos;t find, just create it</h4>
                 <div className="mt-5 row">
                   <div className='col-6'>
-                    <input placeholder='Hackatlon' className='search-input w-100'></input>
+                    <input placeholder='Hackatlon' className='search-input w-100' id="searchField"></input>
                   </div>
                   <div className='col-2 cursor-pointer'>
-                    <Link href="">
-                      <Image src="/images/search-f.svg" width={60} height={60} alt="search" className='h100 white-bg br-5 dark-border-hover' />
+                    <Link href="/">
+                      <Image onClick={(event: any) => getPath()} src="/images/search-f.svg" width={60} height={60} alt="search" className='h100 white-bg br-5 dark-border-hover' />
                     </Link>
                   </div>
                 </div>

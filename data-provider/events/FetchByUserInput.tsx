@@ -8,7 +8,7 @@ export const fetchByUserInput = async (input: string | string[]): Promise<string
     }
     const normalizedSearchText = input.toString().toLowerCase();
     const wildcard = "'\%" + normalizedSearchText + "\%'";
-    let query = "SELECT Type, Title, DisplayLocation, Id FROM v_events_light WHERE `Title` LIKE " + wildcard + " OR `DisplayLocation` LIKE " + wildcard + " OR `Type` LIKE " + wildcard + "";
+    let query = "SELECT Description, Type, Title, DisplayLocation, Id FROM events WHERE `Title` LIKE " + wildcard + " OR `DisplayLocation` LIKE " + wildcard + " OR `Type` LIKE " + wildcard + "";
     
     const searchWords = normalizedSearchText.split(' ');
     for(let i = 1; i < searchWords.length; i++) {
