@@ -23,9 +23,9 @@ const Events: NextPage = () => {
   return (
     <div>
       <NavigationComponent />
-      <div className='h-100'>
+      <div>
         <h1 className='text-center fw-bold fs-55 mt-5 mb-5'>Upcomming events</h1>
-        <div className='container'>
+        <div className='container mb-5'>
           <div className="row">
             {
               events.map((event) => {
