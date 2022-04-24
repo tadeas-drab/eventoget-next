@@ -1,29 +1,32 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
 import Image from 'next/image'
 import 'bootstrap/dist/css/bootstrap.css'
-import NavigationComponent from '../components/NavigationComponent'
-import ContactComponent from '../components/ContactComponent'
+import NavigationComponent from '../../components/NavigationComponent'
+import ContactComponent from '../../components/ContactComponent'
 import Link from 'next/link'
+import { Event } from '../../model/Event'
 
-const Events: NextPage = () => {
+export default function EventInfo(eventData: any) {
+    const event: Event = eventData.eventData as Event;
+
+    console.log(eventData)
+
     return (
         <div>
             <NavigationComponent />
             <div className='top-decor mt-5'></div>
             <div className='white-bg pt-5 pb-5'>
-                <h1 className='text-center fw-bold fs-55'>Ed Sheeran</h1>
+                <h1 className='text-center fw-bold fs-55'>{event.ArtistName}</h1>
                 <div className='container'>
                     <div className='row pt-5'>
                         <div className='col-6 text-end'>
-                            <Image src="/images/sheeran-concert.jpg" alt="photo" width={306} height={175} />
+                            <Image src={event.ImageUrl ? event.ImageUrl : "/images/sheeran-concert.jpg"} alt="photo" width={306} height={175} />
                         </div>
                         <div className='col-1'></div>
                         <div className='col-5'>
                             <br />
-                            <h2><Image src="/images/pin.svg" className='icon' width={30} height={30} alt="pin" />&nbsp;O2 Arena</h2>
+                            <h2><Image src="/images/pin.svg" className='icon' width={30} height={30} alt="pin" />&nbsp;{event.DisplayLocation}</h2>
                             <br />
-                            <h2><Image src="/images/calendar.svg" className='icon' width={30} height={30} alt="calendar" />&nbsp;21.06.2020 18:30</h2>
+                            <h2><Image src="/images/calendar.svg" className='icon' width={30} height={30} alt="calendar" />&nbsp;{event.StartDate ? event.StartDate.split("T")[0] : 'Not defined'}</h2>
                         </div>
                     </div>
                     <div className='row mt-5'>
@@ -44,13 +47,13 @@ const Events: NextPage = () => {
                     <div className='row mt-3'>
                         <div className='col-4'></div>
                         <div className='col-2'>
-                            <Link href="/">
+                            <Link href={event.TicketUrl}>
                                 <a className="button-yellow w-100 p-1" type="button"><h5 className='mb-0 text-center'>More info</h5></a>
                             </Link>
                         </div>
                         <div className='col-1'></div>
                         <div className='col-2'>
-                            <Link href="/event#TravelOptions">
+                            <Link href="#TravelOptions">
                                 <a className="button-yellow w-100 p-1" type="button"><h5 className='mb-0 text-center'>Travel options</h5></a>
                             </Link>
                         </div>
@@ -99,4 +102,18 @@ const Events: NextPage = () => {
     )
 }
 
-export default Events
+export async function getServerSideProps({ params }: any) {
+    const eventId = params.eventId.replace(/\-/g, '+')
+    let response = await fetch(process.env.URL + `/api/events/${eventId}`).then(res => res.json());
+
+    let eventData = response && response.length > 0 ? response[0] : null
+    if (eventData == null)
+        return {
+            notFound: true
+        }
+    return {
+        props: {
+            eventData
+        }
+    }
+}

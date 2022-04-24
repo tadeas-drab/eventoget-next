@@ -9,7 +9,7 @@ const config = {
 };
 
 axios.defaults.headers.common = {
-  apikey: "Yv-HrUbVowJVkKPzG50xncA4C-mATFkl",
+  apikey: process.env.KIWI_APIKEY,
 }
 
 export const fetchFlights = async (flyFrom: string, flyTo: string, departureDate: string, arrivalDate: string): Promise<Flight[]> => {
