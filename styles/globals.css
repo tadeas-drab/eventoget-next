@@ -360,7 +360,7 @@ hr {
 }
 
 
-/* border radius
+/* border
 -------------------------------------------------- */
 
 .br-5 {
@@ -369,6 +369,15 @@ hr {
 
 .br-10 {
     border-radius: 10px !important;
+}
+
+.dark-border-hover {
+    border: 2px solid white !important;
+}
+
+.dark-border-hover:hover {
+    border: 2px solid #012934 !important;
+    transition: all 0.5s ease-in-out;
 }
 
 
