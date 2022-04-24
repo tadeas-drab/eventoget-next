@@ -21,6 +21,10 @@ const Home: NextPage = () => {
       })
   }, []);
 
+  const goToPath = (userInput: string) => {
+    window.location.href = '/trip/' + userInput;
+  }
+
   const clickShowAll = (event: MouseEvent) => {
     event.preventDefault();
 
@@ -49,15 +53,15 @@ const Home: NextPage = () => {
                   </div>
                   <div className='col-2 cursor-pointer'>
                     <Link href="">
-                      <Image src="/images/search-f.svg" width={60} height={60} alt="search" className='h100 white-bg br-5' />
+                        <Image src="/images/search-f.svg" width={60} height={60} alt="search" className='h100 white-bg br-5 dark-border-hover' />
                     </Link>
                   </div>
                 </div>
-                <button className='transparent-button m-1 p-1 pl-2 pr-2'>
+                <button className='transparent-button m-1 p-1 pl-2 pr-2' onClick={(event: any) => goToPath("sheeran concert")}>
                   <h5 className='m-0'>Sheeran concert</h5>
                 </button>
-                <button className='transparent-button m-1 p-1 pl-2 pr-2'>
-                  <h5 className='m-0'>Hack Kosice</h5>
+                <button className='transparent-button m-1 p-1 pl-2 pr-2' onClick={(event: any) => goToPath("baseball")}>
+                  <h5 className='m-0'>Baseball</h5>
                 </button>
               </div>
               <div className='col-4 d-none d-md-block text-center'>
@@ -121,7 +125,7 @@ const Home: NextPage = () => {
             </div>
           </div>
 
-          <hr />
+          <hr className='hr-thin'/>
 
           <div className='row m-4'>
             <div className='col-1'></div>
@@ -136,7 +140,7 @@ const Home: NextPage = () => {
             </div>
           </div>
 
-          <hr />
+          <hr className='hr-thin'/>
 
           <div className='row m-4'>
             <div className='col-5'>
@@ -146,7 +150,7 @@ const Home: NextPage = () => {
             </div>
             <div className='col-2'></div>
             <div className='col-5'>
-              <h1 className=''>Enjoy event</h1>
+              <h1 className=''>3. Enjoy event</h1>
             </div>
           </div>
         </div>
@@ -160,38 +164,38 @@ const Home: NextPage = () => {
 
           <div className="accordion" id="accordionExample">
             <div className="accordion-item">
-              <h2 className="accordion-header" id="headingOne">
+              <h3 className="accordion-header" id="headingOne">
                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  <h3 className='mb-0'>Accordion Item #1</h3>
+                  <h4 className='mb-0'>Is it true that I can find here travel options for every event?</h4>
                 </button>
-              </h2>
-              <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+              </h3>
+              <div id="collapseOne" className="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                 <div className="accordion-body">
-                  bla
+                  For now, you can only find travel options only for events from the portal seetgeek.com
                 </div>
               </div>
             </div>
             <div className="accordion-item">
-              <h2 className="accordion-header" id="headingTwo">
+              <h3 className="accordion-header" id="headingTwo">
                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  <h3 className='mb-0'>Accordion Item #2</h3>
+                  <h4 className='mb-0'>Are events up to date?</h4>
                 </button>
-              </h2>
+              </h3>
               <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                 <div className="accordion-body">
-                  bla
+                  Yes, our event database is updated four times a day.
                 </div>
               </div>
             </div>
             <div className="accordion-item">
-              <h2 className="accordion-header" id="headingThree">
+              <h3 className="accordion-header" id="headingThree">
                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  <h3 className='mb-0'>Accordion Item #3</h3>
+                  <h4 className='mb-0'>Are travel options up to date?</h4>
                 </button>
-              </h2>
+              </h3>
               <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                 <div className="accordion-body">
-                  bla
+                  Yes, 
                 </div>
               </div>
             </div>
