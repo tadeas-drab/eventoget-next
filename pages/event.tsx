@@ -23,7 +23,7 @@ const Events: NextPage = () => {
                             <br/>
                             <h2><Image src="/images/pin.svg" className='icon' width={30} height={30} alt="pin"/>&nbsp;O2 Arena</h2>
                             <br/>
-                            <h2><Image src="/images/calendar.svg" className='icon' width={30} height={30} alt="calendar"/>&nbsp;21.06.2020</h2>
+                            <h2><Image src="/images/calendar.svg" className='icon' width={30} height={30} alt="calendar"/>&nbsp;21.06.2020 18:30</h2>
                         </div>
                     </div>
                     <div className='row mt-5'>
@@ -40,12 +40,27 @@ const Events: NextPage = () => {
                             </p>
                         </div>
                         <div className='col-2'></div>
-                    
+                    </div>
+                    <div className='row mt-3'>
+                        <div className='col-4'></div>
+                        <div className='col-2'>
+                            <Link href="/">
+                                <a className="button-yellow w-100 p-1" type="button"><h5 className='mb-0 text-center'>More info</h5></a>
+                            </Link>
+                        </div>
+                        <div className='col-1'></div>
+                        <div className='col-2'>
+                            <Link href="/event#TravelOptions">
+                                <a className="button-yellow w-100 p-1" type="button"><h5 className='mb-0 text-center'>Travel options</h5></a>
+                            </Link>
+                        </div>
+                        <div className='col-3'></div>
                     </div>
                 </div>
             </div>
             <div className='bottom-decor'></div>
             
+            <span id="TravelOptions"></span>
             <div className='mt-5 mb-5 container'>
                 <h1 className='text-center fw-bold fs-55'>Find flight</h1>
                 <div className='row mt-5'>
