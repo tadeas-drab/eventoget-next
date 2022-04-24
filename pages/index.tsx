@@ -171,13 +171,13 @@ const Home: NextPage = () => {
       
       <div className='top-decor'></div>
       <div className='white-bg'>
-        <div className="container pt-3 pb-3">
+        <div className="container pt-3 pb-5">
           <h1 className='text-center fw-bold fs-55'>FAQ</h1>
           
           <div className="accordion" id="accordionExample">
             <div className="accordion-item">
               <h2 className="accordion-header" id="headingOne">
-                <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                   <h3 className='mb-0'>Accordion Item #1</h3>
                 </button>
               </h2>
