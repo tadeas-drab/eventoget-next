@@ -189,7 +189,7 @@ const Home: NextPage = () => {
               </h3>
               <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                 <div className="accordion-body">
-                  Yes, our event database is updated twelve times a day. It's our mission to keep it as up-to-date as possible.
+                  Yes, our event database is updated twelve times a day. It&apos;s our mission to keep it as up-to-date as possible.
                 </div>
               </div>
             </div>

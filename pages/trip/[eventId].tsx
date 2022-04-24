@@ -6,8 +6,6 @@ import Link from 'next/link'
 import { Event } from '../../model/Event'
 import { useEffect, useState } from 'react'
 import FlightCardComponent from '../../components/FlightCardComponent'
-import { fetchArrivalLocation } from '../../data-provider/kiwi/FetchArrivalLocation'
-import { fetchFlights } from '../../data-provider/kiwi/FetchFlights'
 import { Flight } from '../../model/Flight'
 
 export default function EventInfo(eventData: any) {
@@ -74,7 +72,7 @@ export default function EventInfo(eventData: any) {
 
         const dateString = currentYear + "-" + (currentMonth + 1) + "-" + currentDayOfMonth;
 
-        let flightsRaw: Response = await fetch(`/api/kiwi/flights?flyFrom=${departureLoc}&flyTo=${arrivalLocation}&departureDate=${departure}&arrivalDate=${dateString}`);
+        let flightsRaw: Response = await fetch(`/api/kiwi/flightsearch?flyFrom=${departureLoc}&flyTo=${arrivalLocation}&departureDate=${departure}&arrivalDate=${dateString}`);
         let r = await flightsRaw.json()
         setFlights(r);
 

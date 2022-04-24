@@ -11,8 +11,8 @@ const FlightCardComponent: any = ({ flights }: { flights: Flight[] }) => {
 
     return (
         <div className='card-light br-10 w-100'>
-            {flights.map((flight: Flight) => {
-                return flight.data.map((data: Data) => {
+            {flights?.map((flight: Flight) => {
+                return flight?.data?.map((data: Data) => {
                     const from = data.cityFrom + ' - ' + data.countryFrom.name
                     const to = data.cityTo + ' - ' + data.countryTo.name
                     const price = data.price + ' ' + flight.currency

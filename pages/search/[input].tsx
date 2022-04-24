@@ -10,7 +10,6 @@ export default function SearchResult(props: any) {
     let events: Event[] = props.eventData;
 
     console.log(events)
-    console.log("sadddsaddasdasdas")
 
     return (
         <div>
@@ -20,11 +19,14 @@ export default function SearchResult(props: any) {
                 <div className='container mb-5'>
                     <div className="row">
                         {
-                            events.map((event: Event) => {
-                                return (
-                                    <EventLightComponent key={event.Id} {...event} />
-                                )
-                            })
+                            events && events.length > 0 ?
+                                events.map((event: Event) => {
+                                    return (
+                                        <EventLightComponent key={event.Id} {...event} />
+                                    )
+                                })
+                                :
+                                <h4>No event found :/</h4>
                         }
                     </div>
                 </div>

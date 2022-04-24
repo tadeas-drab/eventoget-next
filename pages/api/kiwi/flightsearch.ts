@@ -10,5 +10,6 @@ export default async function handler(
     let flyTo = req.query['flyTo'].toString();
     let departureDate = req.query['departureDate'].toString();
     let arrivalDate = req.query['arrivalDate'].toString();
+
     res.status(200).json(await fetchFlights(flyFrom, flyTo, departureDate, arrivalDate))
 }
