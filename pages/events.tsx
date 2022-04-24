@@ -5,8 +5,21 @@ import 'bootstrap/dist/css/bootstrap.css'
 import Navigation from './shared/navigation'
 import Contact from './shared/contact'
 import Link from 'next/link'
+import { useState, useEffect } from 'react'
+import EventComponent from './shared/EventComponent'
+import {Event} from '../model/Event'
 
 const Events: NextPage = () => {
+    const [events, setEvents] = useState<Event[]>([])
+  
+    useEffect(() => {
+      fetch('api/events/mostpopular')
+      .then((res) => res.json()) 
+      .then((data) => {
+        setEvents(data);
+      })   
+    }, []);
+
     return (
         <div>
             <Navigation/>
@@ -14,63 +27,13 @@ const Events: NextPage = () => {
                 <h1 className='text-center fw-bold fs-55 mt-5 mb-5'>Upcomming events</h1>
                 <div className='container'>
                     <div className="row">
-                        <div className='col-3'>
-                            <div className='card-light'>
-                                <Image src="/images/sheeran-concert.jpg" alt="photo" width={306} height={175}/>
-                                <div className='card-text'>
-                                    <h2 className='fw-bold'>Ed Sheeran</h2>
-                                    <h4><Image src="/images/pin.svg" className='icon' width={18} height={18} alt="pin"/>&nbsp;O2 Arena</h4>
-                                    <h4><Image src="/images/calendar.svg" className='icon' width={18} height={18} alt="calendar"/>&nbsp;21.06.2020</h4>
-                                    <div className='text-center'>
-                                        <Link href="/event">
-                                            <a className="card-button p-1" type="button"><h5 className='mb-0'>More info</h5></a>
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className='col-3'>
-                        <div className='card-light'>
-                            <Image src="/images/sheeran-concert.jpg" alt="photo" width={306} height={175} className='card-img'/>
-                        <div className='card-text'>
-                            <h2 className='fw-bold'>Ed Sheeran</h2>
-                            <h4><Image src="/images/pin.svg" className='icon' width={18} height={18} alt="pin"/>&nbsp;O2 Arena</h4>
-                            <h4><Image src="/images/calendar.svg" className='icon' width={18} height={18} alt="calendar"/>&nbsp;21.06.2020</h4>
-                            <div className='text-center'>
-                            <button className='card-button'><h5 className='mb-0'>More info</h5></button>
-                            </div>
-                        </div>
-                        </div>
-                        </div>
-
-                        <div className='col-3'>
-                        <div className='card-light'>
-                            <Image src="/images/sheeran-concert.jpg" alt="photo" width={306} height={175} className='card-img'/>
-                        <div className='card-text'>
-                            <h2 className='fw-bold'>Ed Sheeran</h2>
-                            <h4><Image src="/images/pin.svg" className='icon' width={18} height={18} alt="pin"/>&nbsp;O2 Arena</h4>
-                            <h4><Image src="/images/calendar.svg" className='icon' width={18} height={18} alt="calendar"/>&nbsp;21.06.2020</h4>
-                            <div className='text-center'>
-                            <button className='card-button'><h5 className='mb-0'>More info</h5></button>
-                            </div>
-                        </div>
-                        </div>
-                        </div>
-
-                        <div className='col-3'>
-                        <div className='card-light'>
-                            <Image src="/images/sheeran-concert.jpg" alt="photo" width={306} height={175} className='card-img'/>
-                        <div className='card-text'>
-                            <h2 className='fw-bold'>Ed Sheeran</h2>
-                            <h4><Image src="/images/pin.svg" className='icon' width={18} height={18} alt="pin"/>&nbsp;O2 Arena</h4>
-                            <h4><Image src="/images/calendar.svg" className='icon' width={18} height={18} alt="calendar"/>&nbsp;21.06.2020</h4>
-                            <div className='text-center'>
-                            <button className='card-button'><h5 className='mb-0'>More info</h5></button>
-                            </div>
-                        </div>
-                        </div>
-                        </div>
+                      {
+                      events.slice(0,4).map((event) => {
+                          return (
+                          <EventComponent key={event.Id} {...event}/>
+                          )
+                      })
+                      }
                     </div>
                 </div>
             </div>
