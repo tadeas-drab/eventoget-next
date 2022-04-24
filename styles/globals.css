@@ -10,6 +10,10 @@ body {
     color: #014254;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 a {
     color: inherit;
     text-decoration: none;
@@ -52,6 +56,11 @@ a {
     height: 100vh !important;
 }
 
+.hm100 {
+    height: 100% !important;
+    max-height: 100% !important;
+}
+
 .w-75 {
     width: 75%;
 }
@@ -65,7 +74,7 @@ a {
 }
 
 .fs-55 {
-    font-size: 5em !important;
+    font-size: 4.5em !important;
 }
 
 .fs-4 {
@@ -209,6 +218,13 @@ input:focus {
     color: white;
 }
 
+.card-light {
+    background: #f2f2f2;
+    border-radius: 0 0 10px 10px;
+    border: 0;
+    width: 100%;
+}
+
 
 /* icons
 -------------------------------------------------- */
@@ -305,4 +321,20 @@ hr {
 
 .z-999 {
     z-index: 999 !important;
+}
+
+
+/* border radius
+-------------------------------------------------- */
+
+.br-5 {
+    border-radius: 5px;
+}
+
+
+/* cursor
+-------------------------------------------------- */
+
+.cursor-pointer {
+    cursor: pointer;
 }
