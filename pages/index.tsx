@@ -21,6 +21,10 @@ const Home: NextPage = () => {
       })
   }, []);
 
+  const goToPath = (userInput: string) => {
+    window.location.href = '/trip/' + userInput;
+  }
+
   const clickShowAll = (event: MouseEvent) => {
     event.preventDefault();
 
@@ -53,11 +57,11 @@ const Home: NextPage = () => {
                     </Link>
                   </div>
                 </div>
-                <button className='transparent-button m-1 p-1 pl-2 pr-2'>
+                <button className='transparent-button m-1 p-1 pl-2 pr-2' onClick={(event: any) => goToPath("sheeran concert")}>
                   <h5 className='m-0'>Sheeran concert</h5>
                 </button>
-                <button className='transparent-button m-1 p-1 pl-2 pr-2'>
-                  <h5 className='m-0'>Hack Kosice</h5>
+                <button className='transparent-button m-1 p-1 pl-2 pr-2' onClick={(event: any) => goToPath("baseball")}>
+                  <h5 className='m-0'>Baseball</h5>
                 </button>
               </div>
               <div className='col-4 d-none d-md-block text-center'>
