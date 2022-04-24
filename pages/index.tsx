@@ -121,7 +121,7 @@ const Home: NextPage = () => {
             </div>
           </div>
 
-          <hr />
+          <hr className='hr-thin'/>
 
           <div className='row m-4'>
             <div className='col-1'></div>
@@ -136,7 +136,7 @@ const Home: NextPage = () => {
             </div>
           </div>
 
-          <hr />
+          <hr className='hr-thin'/>
 
           <div className='row m-4'>
             <div className='col-5'>
@@ -146,7 +146,7 @@ const Home: NextPage = () => {
             </div>
             <div className='col-2'></div>
             <div className='col-5'>
-              <h1 className=''>Enjoy event</h1>
+              <h1 className=''>3. Enjoy event</h1>
             </div>
           </div>
         </div>
