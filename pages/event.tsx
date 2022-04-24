@@ -85,7 +85,7 @@ const Events: NextPage = () => {
                                 <input className="form-control" id="departureDateField"></input>
                             </div>
                             <div className='col-2 cursor-pointer'>
-                                <Link href="">
+                                <Link href="/flights">
                                     <Image src="/images/search-f.svg" width={36} height={36} alt="search" className='h100 white-bg br-5'/>
                                 </Link>
                             </div>

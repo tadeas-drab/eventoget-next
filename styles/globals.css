@@ -44,6 +44,14 @@ a {
     background-color: #fff !important;
 }
 
+.dark-hover:hover {
+    background-color: #276d72;
+    color: white;
+    cursor: ponter;
+    transition: all 0.5s ease-in-out;
+    padding: 0 !important
+}
+
 
 /* size
 -------------------------------------------------- */
@@ -162,6 +170,7 @@ input:focus {
 .button-yellow:hover {
     background-color: #8be89f;
     color: #012934 !important;
+    transition: all 0.5s ease-in-out;
 }
 
 
@@ -221,6 +230,7 @@ input:focus {
 .transparent-button:hover {
     background-color: #014254;
     color: white;
+    transition: all 0.5s ease-in-out;
 }
 
 .card-light {
@@ -256,7 +266,11 @@ hr {
 }
 
 .vertical-border-line-thin {
-    border-left: 2px solid #012934;
+    border-left: 2px solid #276d72;
+}
+
+.vertical-border-line-right-thin {
+    border-right: 2px solid #276d72;
 }
 
 
@@ -334,6 +348,10 @@ hr {
 
 .br-5 {
     border-radius: 5px;
+}
+
+.br-10 {
+    border-radius: 10px !important;
 }
 
 

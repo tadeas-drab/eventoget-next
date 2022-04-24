@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 362.4212 360.80652"
+   version="1.1"
+   id="svg12"
+   sodipodi:docname="reshot-icon-landing-AXW4HCVKGP.svg"
+   width="362.4212"
+   height="360.80652"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs16" />
+  <sodipodi:namedview
+     id="namedview14"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="1.4042969"
+     inkscape:cx="179.09318"
+     inkscape:cy="184.78999"
+     inkscape:window-width="1920"
+     inkscape:window-height="1013"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg12" />
+  <title
+     id="title2">Landing</title>
+  <g
+     id="Landing"
+     style="fill:#014254;fill-opacity:1"
+     transform="translate(-74.989403,-75.596591)">
+    <g
+       id="Landing-2"
+       data-name="Landing"
+       style="fill:#014254;fill-opacity:1">
+      <path
+         d="m 408.4536,323.5554 -4.6654,-1.253 L 79.7,235.4629 l 8.9775,-32.3485 -5.26,-55.1456 0.4693,-1.7422 a 15.7393,15.7393 0 0 1 19.2318,-11.1255 l 26.1212,7.0062 39.747,45.8347 54.4664,12.2464 L 194.08,91.231 l 0.6954,-2.59 a 17.5862,17.5862 0 0 1 21.5527,-12.4421 l 41.439,11.1017 68.5814,136.6974 68.1,15.8336 c 25.5123,6.8467 40.9469,32.2763 34.41,56.6847 a 44.2117,44.2117 0 0 1 -16.5319,24.1528 z M 104.3092,221.4048 403.8015,301.657 a 24.0049,24.0049 0 0 0 5.7893,-10.3075 c 3.6774,-13.7389 -5.3571,-28.159 -20.16,-32.2126 L 312.72,241.3121 243.9526,104.2555 216.2487,96.8342 251.3141,226.9081 158.21,205.9739 l -40.0425,-46.1775 -13.9384,-3.7412 4.6617,48.8377 z"
+         id="path4"
+         style="fill:#014254;fill-opacity:1" />
+      <rect
+         x="74.989403"
+         y="381.5368"
+         width="362.4212"
+         height="19.950001"
+         id="rect6"
+         style="fill:#014254;fill-opacity:1" />
+      <rect
+         x="74.989403"
+         y="416.45309"
+         width="362.4212"
+         height="19.950001"
+         id="rect8"
+         style="fill:#014254;fill-opacity:1" />
+    </g>
+  </g>
+  <metadata
+     id="metadata833">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Landing</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>
