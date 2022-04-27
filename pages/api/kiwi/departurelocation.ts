@@ -1,5 +1,5 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
+// @ts-ignore
 import { fetchDepartureLocation } from '../../../data-provider/kiwi/FetchDepartureLocation';
 
 export default async function handler(
