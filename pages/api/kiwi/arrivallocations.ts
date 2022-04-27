@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import fetchArrivalLoc from '../../../data-provider/kiwi/fetcharrivallocation';
+import fetchArrivalLoc from '../../../data-provider/kiwi/FetchArrivalLocation';
 
 export default async function handler(
     req: NextApiRequest,
