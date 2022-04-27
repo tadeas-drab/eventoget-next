@@ -1,4 +1,3 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 // @ts-ignore
 import type { NextApiRequest, NextApiResponse } from 'next'
 // @ts-ignore
