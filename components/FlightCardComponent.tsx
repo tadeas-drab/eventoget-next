@@ -10,14 +10,14 @@ const FlightCardComponent: any = ({ flights }: { flights: Flight[] }) => {
     const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'numeric', day: 'numeric', timeZoneName: 'short', hour: '2-digit', minute: '2-digit' };
 
     return (
-        <div className='card-light br-10 w-100'>
+        <div className=''>
             {flights?.map((flight: Flight) => {
                 return flight?.data?.map((data: Data) => {
                     const from = data.cityFrom + ' - ' + data.countryFrom.name
                     const to = data.cityTo + ' - ' + data.countryTo.name
                     const price = data.price + ' ' + flight.currency
 
-                    return <div className='row' key={data.id}>
+                    return <div className='row card-light br-10 w-100 mt-3' key={data.id}>
                         <div className='col-9 p-0'>
                             <div className='card-text pr-0'>
                                 <div className=' vertical-border-line-right-thin'>
