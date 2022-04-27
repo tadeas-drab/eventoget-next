@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-// @ts-ignore
-import { fetchDepartureLocation } from '../../../data-provider/kiwi/FetchDepartureLocation';
+import fetchDepartureLocation from '../../../data-provider/kiwi/FetchDepartureLocation';
 
 export default async function handler(
     req: NextApiRequest,

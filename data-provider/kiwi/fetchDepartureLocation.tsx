@@ -10,7 +10,7 @@ axios.defaults.headers.common = {
   apikey: process.env.KIWI_APIKEY,
 };
 
-export const fetchDepartureLocation = async (userInput: string) => {
+const fetchDepartureLocation = async (userInput: string) => {
   try {
     const response = await axios.get(
       `https://tequila-api.kiwi.com/locations/query?term=${userInput}&locale=en-US&location_types=airport&limit=10&active_only=true`,
@@ -28,3 +28,5 @@ export const fetchDepartureLocation = async (userInput: string) => {
     console.error(error);
   }
 }
+
+export default fetchDepartureLocation;

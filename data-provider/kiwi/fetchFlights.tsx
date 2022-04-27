@@ -14,7 +14,7 @@ axios.defaults.headers.common = {
   apikey: process.env.KIWI_APIKEY,
 }
 
-export const fetchFlights = async (flyFrom: string, flyTo: string, departureDate: string, arrivalDate: string): Promise<Flight[]> => {
+const fetchFlights = async (flyFrom: string, flyTo: string, departureDate: string, arrivalDate: string): Promise<Flight[]> => {
   try {
     const response = await axios.get(
       `https://tequila-api.kiwi.com/v2/search?fly_from=${flyFrom}&fly_to=${flyTo}&date_from=${departureDate}&date_to=${departureDate}&return_from=${arrivalDate}&return_to=${arrivalDate}&flight_type=round&adults=1&vehicle_type=aircraft&sort=duration&limit=10`,
@@ -62,3 +62,5 @@ export const fetchFlights = async (flyFrom: string, flyTo: string, departureDate
     return []
   }
 }
+
+export default fetchFlights;

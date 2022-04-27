@@ -10,7 +10,7 @@ axios.defaults.headers.common = {
   apikey: process.env.KIWI_APIKEY,
 }
 
-export default async function fetchArrivalLoc(latitude: string, longitude: string, radius: string = "500") {
+const fetchArrivalLoc = async (latitude: string, longitude: string, radius: string = "500") => {
   try {
     const response = await axios.get(
       `https://tequila-api.kiwi.com/locations/radius?lat=${latitude}&lon=${longitude}&radius=${radius}&locale=en-US&location_types=airport&limit=1&active_only=true`,
@@ -21,3 +21,5 @@ export default async function fetchArrivalLoc(latitude: string, longitude: strin
     console.error(error);
   }
 }
+
+export default fetchArrivalLoc;
