@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v3
 
       - name: Set up Node.js version
         uses: actions/setup-node@v3
@@ -19,7 +19,7 @@ jobs:
       - name: Perform install, build commands
         run: |
             npm install 
-            npm run lint
+            npm run build
       - name: Deploy NextJS app to VM Server
         uses: appleboy/ssh-action@master
         with:
